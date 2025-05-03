@@ -26,17 +26,17 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/Accueil" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
                 Accueil
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/a-propos" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
                 À Propos
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/menu" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/Menu" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
                 Menu
               </Link>
             </li>
@@ -46,8 +46,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/commercia" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
-                Commercia
+              <Link to="/commande" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+                Commande
               </Link>
             </li>
             <li className="nav-item">

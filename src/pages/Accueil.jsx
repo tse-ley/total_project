@@ -25,13 +25,18 @@ const Home = () => {
           className="w-100" 
           style={{ height: '24rem', objectFit: 'cover' }}
         />
+        <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
+          <h1 className="display-4 fw-bold">Bienvenue au Restaurant Népalais</h1>
+          <p className="lead">Découvrez les saveurs authentiques du Népal</p>
+          <button className="btn btn-warning text-white fw-bold px-4">Explorer le Menu</button>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="container py-5">
+      <div className="container-fluid py-5">
         {/* Intro Section */}
-        <section className="mb-5">
-          <h1 className="h3 fw-bold text-warning mb-3">Bienvenue au Restaurant Népalais</h1>
+        <section className="mb-5 text-center">
+          <h1 className="h3 fw-bold text-warning mb-3">À Propos de Nous</h1>
           <p className="text-muted mb-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error...
           </p>
@@ -43,7 +48,7 @@ const Home = () => {
         {/* Temple Section */}
         <section className="row align-items-center mb-5">
           <div className="col-md-6 mb-4 mb-md-0">
-            <h2 className="h4 fw-bold text-warning mb-3">Lorem Ipsum</h2>
+            <h2 className="h4 fw-bold text-warning mb-3">Découvrez notre Culture</h2>
             <p className="text-muted mb-3">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
             </p>
@@ -64,7 +69,7 @@ const Home = () => {
 
         {/* Menu Preview */}
         <section className="mb-5">
-          <h2 className="h4 fw-bold text-warning mb-4">Lorem Ipsum Plats</h2>
+          <h2 className="h4 fw-bold text-warning mb-4 text-center">Nos Spécialités</h2>
           <div className="row g-4">
             <div className="col-md-4">
               <div className="bg-warning bg-opacity-25 p-3 rounded shadow-sm h-100">
