@@ -13,7 +13,7 @@ const Contact = () => {
                 <h5 className="mb-4">Find us at</h5>
                 <div className="d-flex align-items-start mb-2">
                   <i className="bi bi-geo-alt me-2 mt-1"></i>
-                  <p>21 rue de bolivard, 75010 Paris</p>
+                  <p>2 Rue François Mouthon, 75015 Paris</p>
                 </div>
                 <div className="d-flex align-items-start mb-2">
                   <i className="bi bi-telephone me-2 mt-1"></i>

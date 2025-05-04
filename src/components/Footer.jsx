@@ -10,8 +10,10 @@ const Footer = () => {
           <div className="col-md-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
             <img src={logo} alt="Restaurant Logo" style={{ height: '50px' }} className="me-3" />
             <div>
-              <p className="mb-1">Heures: 12:00 - 23:00</p>
-              <p className="mb-0">Adresse: 123 Rue Example, Ville</p>
+              <p className="mb-1">Heures: Mardi - Dimanche : 12H - 14h30
+                                  Mardi - Jeudi : 18H30 - 23H
+                                  Vendredi - Dimanche : 18H30 - 23H30</p>
+              <p className="mb-1">Adresse: 2 Rue François Mouthon, 75015 Paris</p>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md shadow-sm" style={{ backgroundColor: '#F8C78B' }}>
       <div className="container">
-        <Link to="/" className="navbar-brand d-flex align-items-center">
+        <Link to="accueil" className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="Restaurant Logo" height="48" />
         </Link>
         <button
