@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import restaurantImage from '../assets/kitchen.jpg';
 import spiceImage from '../assets/momo.jpg';
 import thaliPlatterImage from '../assets/thali1.jpg';
@@ -10,7 +8,7 @@ import templeInteriorImage from '../assets/temple.jpg';
 
 const About = () => {
   return (
-    <div className="min-vh-100 d-flex flex-column bg-light">
+    <div className="min-vh-100 d-flex flex-column ">
      
 
       {/* Hero Section */}
@@ -31,7 +29,7 @@ const About = () => {
       <div className="container-fluid py-5">
         {/* Know Us Section */}
         <section className="mb-5">
-          <h2 className="fs-2 fw-bold text-warning mb-4 text-center">NOUS CONNAÎTRE</h2>
+          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">NOUS CONNAÎTRE</h2>
           <div className="row align-items-center g-4">
             <div className="col-md-6">
               <img 
@@ -56,7 +54,7 @@ const About = () => {
 
         {/* View at Sagarmatha Section */}
         <section className="mb-5">
-          <h2 className="fs-2 fw-bold text-warning mb-4 text-center">VUE AU SAGARMATHA</h2>
+          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">VUE AU SAGARMATHA</h2>
           <div className="row align-items-center g-4">
             <div className="col-md-6">
               <p className="text-secondary mb-3">
@@ -78,10 +76,10 @@ const About = () => {
 
         {/* Enjoy the Ambiance Section */}
         <section className="mb-5">
-          <h2 className="fs-2 fw-bold text-warning mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
+          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="card h-100 bg-warning bg-opacity-10">
+              <div className="card h-100 bg-dark bg-opacity-10">
                 <img 
                   src={curryImage} 
                   alt="Cuisine népalaise" 
@@ -96,7 +94,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 bg-warning bg-opacity-10">
+              <div className="card h-100 bg-dark bg-opacity-10">
                 <img 
                   src={restaurantImage} 
                   alt="Ambiance du restaurant" 
@@ -111,7 +109,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 bg-warning bg-opacity-10">
+              <div className="card h-100 bg-dark bg-opacity-10">
                 <img 
                   src={templeInteriorImage} 
                   alt="Décorations traditionnelles" 
@@ -130,7 +128,7 @@ const About = () => {
 
         {/* Our Cuisine Section */}
         <section>
-          <h2 className="fs-2 fw-bold text-warning mb-4 text-center">NOTRE CUISINE</h2>
+          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">NOTRE CUISINE</h2>
           <p className="text-secondary text-center mb-4">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
           </p>
@@ -169,7 +167,7 @@ const About = () => {
             </div>
           </div>
           <div className="text-center mt-4">
-            <button className="btn btn-warning text-white fw-bold">
+            <button className="btn btn-dark text-white fw-bold">
               Voir Menu
             </button>
           </div>
