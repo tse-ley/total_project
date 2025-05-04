@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Footer from '../components/Footer';
 import heroImage from '../assets/hero-food.jpg';
 import momoImage from '../assets/momo.jpg'; 
 import thaliImage from '../assets/thali1.jpg'; 
@@ -163,8 +162,6 @@ const Home = () => {
           </form>
         </section>
       </div>
-
-      <Footer />
     </div>
   );
 };

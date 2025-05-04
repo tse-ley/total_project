@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 import Order from './pages/Commande';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/order" element={<  Order />} />
+        <Route path="/commande" element={<  Order />} />
       </Routes>
       <Footer />
     </Router>

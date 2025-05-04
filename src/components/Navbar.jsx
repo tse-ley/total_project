@@ -4,14 +4,13 @@ import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-warning shadow-sm">
+    <nav className="navbar navbar-expand-md shadow-sm" style={{ backgroundColor: '#F8C78B' }}>
       <div className="container">
         <Link to="/" className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="Restaurant Logo" height="48" />
         </Link>
-
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +21,6 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">

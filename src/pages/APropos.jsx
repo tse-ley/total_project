@@ -11,7 +11,7 @@ import templeInteriorImage from '../assets/temple.jpg';
 const About = () => {
   return (
     <div className="min-vh-100 d-flex flex-column bg-light">
-      <Navbar />
+     
 
       {/* Hero Section */}
       <div className="position-relative">
@@ -176,7 +176,6 @@ const About = () => {
         </section>
       </div>
 
-      <Footer />
     </div>
   );
 };
