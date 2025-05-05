@@ -149,25 +149,25 @@ const MenuFormulaires = () => {
       <Container>
         <h1 className="page-title">Formulaires</h1>
 
-        {/* Menu Navigation */}
-        <Row className="mb-4">
+        {/* Navigation Tabs */}
+        <Row className="mb-5">
           <Col>
             <div className="menu-tabs">
               <Nav variant="tabs" className="justify-content-center">
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/entrees">Entrées</Nav.Link>
+                  <Nav.Link as={Link} to="/menu">Entrées</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/boissons">Boissons</Nav.Link>
+                  <Nav.Link as={Link} to="/menuboisson">Boissons</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/plats">Plats</Nav.Link>
+                  <Nav.Link as={Link} to="/menuplats">Plats</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/formulaires" active>Formulaires</Nav.Link>
+                  <Nav.Link active>Formulaires</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/desserts">Dessert</Nav.Link>
+                  <Nav.Link as={Link} to="/menudessert">Desserts</Nav.Link>
                 </Nav.Item>
               </Nav>
             </div>

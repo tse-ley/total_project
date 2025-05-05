@@ -1,88 +1,28 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext'; // Import useCart
 import MenuSection from '../components/MenuSection';
 import '../Menu.css';
 
 const MenuPlats = () => {
-  // Sample data for main courses
+  const { addToCart } = useCart(); // Use the addToCart function from CartContext
+
   const platsTraditionnels = [
     {
       id: 'p1',
-      name: 'Plats Maison',
-      description: 'Spécialité du chef avec sauce maison et légumes de saison',
-      price: 16.50,
-      image: '/src/assets/plat1.jpg'
+      name: 'Dal Bhat',
+      description: 'Plat traditionnel népalais avec riz et lentilles',
+      price: 12.99,
+      image: '/images/dal-bhat.jpg',
     },
     {
       id: 'p2',
-      name: 'Poulet Teriyaki',
-      description: 'Poulet grillé avec sauce teriyaki et légumes sautés',
-      price: 15.50,
-      image: '/src/assets/plat2.jpg'
+      name: 'Momo',
+      description: 'Raviolis népalais farcis et cuits à la vapeur',
+      price: 9.99,
+      image: '/images/momo.jpg',
     },
-    {
-      id: 'p3',
-      name: 'Boeuf Sauté',
-      description: 'Boeuf sauté avec légumes et sauce maison',
-      price: 17.50,
-      image: '/src/assets/plat3.jpg'
-    },
-    {
-      id: 'p4',
-      name: 'Tofu Frit',
-      description: 'Tofu frit avec sauce spéciale et légumes',
-      price: 14.50,
-      image: '/src/assets/plat4.jpg'
-    }
-  ];
-
-  const specialitesChaud = [
-    {
-      id: 'sp1',
-      name: 'Speciality Chaudon',
-      description: 'Plat chaud spécial du chef avec mélange d\'épices exotiques',
-      price: 18.90,
-      image: '/src/assets/plat_special1.jpg'
-    },
-    {
-      id: 'sp2',
-      name: 'Ramen Deluxe',
-      description: 'Ramen avec bouillon riche, porc char siu et oeuf mariné',
-      price: 16.90,
-      image: '/src/assets/plat_special2.jpg'
-    },
-    {
-      id: 'sp3',
-      name: 'Udon aux Fruits de Mer',
-      description: 'Nouilles udon avec assortiment de fruits de mer et légumes',
-      price: 19.50,
-      image: '/src/assets/plat_special3.jpg'
-    }
-  ];
-
-  const specialitesHinaton = [
-    {
-      id: 'sh1',
-      name: 'Specialty Hinaton',
-      description: 'Plat spécial avec sauce Hinaton et accompagnements traditionnels',
-      price: 22.00,
-      image: '/src/assets/plat_hinaton1.jpg'
-    },
-    {
-      id: 'sh2',
-      name: 'Chirashi',
-      description: 'Bol de riz avec assortiment de poissons crus et légumes',
-      price: 24.50,
-      image: '/src/assets/plat_hinaton2.jpg'
-    },
-    {
-      id: 'sh3',
-      name: 'Hinaton Special',
-      description: 'Spécialité exclusive de la maison Hinaton avec ingrédients secrets',
-      price: 26.00,
-      image: '/src/assets/plat_hinaton3.jpg'
-    }
   ];
 
   return (
@@ -90,35 +30,37 @@ const MenuPlats = () => {
       <Container>
         <h1 className="page-title">Plats</h1>
 
-        {/* Menu Navigation */}
-        <Row className="mb-4">
+        <Row className="mb-5">
           <Col>
             <div className="menu-tabs">
               <Nav variant="tabs" className="justify-content-center">
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/entrees">Entrées</Nav.Link>
+                  <Nav.Link as={Link} to="/menu">Entrées</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/boissons">Boissons</Nav.Link>
+                  <Nav.Link as={Link} to="/menuboisson">Boissons</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/plats" active>Plats</Nav.Link>
+                  <Nav.Link active>Plats</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/formulaires">Formulaires</Nav.Link>
+                  <Nav.Link as={Link} to="/menuformulaire">Formulaires</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/menu/desserts">Dessert</Nav.Link>
+                  <Nav.Link as={Link} to="/menudessert">Desserts</Nav.Link>
                 </Nav.Item>
               </Nav>
             </div>
           </Col>
         </Row>
 
-        {/* Main courses sections */}
-        <MenuSection title="Plats Traditionnels" items={platsTraditionnels} />
-        <MenuSection title="Speciality Chaudon" items={specialitesChaud} />
-        <MenuSection title="Specialty Hinaton" items={specialitesHinaton} />
+        <MenuSection
+          title="Plats Traditionnels"
+          items={platsTraditionnels.map((item) => ({
+            ...item,
+            onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
+          }))}
+        />
       </Container>
     </div>
   );

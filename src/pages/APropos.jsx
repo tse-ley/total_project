@@ -79,7 +79,7 @@ const About = () => {
           <h2 className="fs-2 fw-bold text-dark mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="card h-100 bg-dark bg-opacity-10">
+              <div className="card h-100 bg-warning bg-opacity-10">
                 <img 
                   src={curryImage} 
                   alt="Cuisine népalaise" 
@@ -94,7 +94,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 bg-dark bg-opacity-10">
+              <div className="card h-100 bg-warning bg-opacity-10">
                 <img 
                   src={restaurantImage} 
                   alt="Ambiance du restaurant" 
@@ -109,7 +109,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 bg-dark bg-opacity-10">
+              <div className="card h-100 bg-warning bg-opacity-10">
                 <img 
                   src={templeInteriorImage} 
                   alt="Décorations traditionnelles" 
