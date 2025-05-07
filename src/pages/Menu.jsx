@@ -60,56 +60,312 @@ const Menu = () => {
   const entreesSimples = [
     {
       id: 'e1',
-      name: 'Salade Verte',
-      description: 'Salade fraîche avec vinaigrette maison',
-      price: 5.5,
+      name: 'Raita',
+      description: 'Crudités émincées au yaourt faitr maison',
+      price: 6.50,
       image: '/src/assets/entree1.jpg'
     },
     {
       id: 'e2',
-      name: 'Soupe Miso',
-      description: 'Soupe traditionnelle japonaise au miso et tofu',
-      price: 6.5,
+      name: 'Salade Népalaise',
+      description: 'Concombres, tomates, carottes et sauce sésame',
+      price: 7.0,
       image: '/src/assets/entree2.jpg'
     },
     {
       id: 'e3',
-      name: 'Gyoza',
-      description: 'Raviolis japonais grillés (5 pièces)',
-      price: 7.5,
+      name: 'Daal Soupe',
+      description: 'Potage aux lentilles à la façon Indien',
+      price: 7.0,
       image: '/src/assets/entree3.jpg'
     },
     {
       id: 'e4',
-      name: 'Edamame',
-      description: 'Fèves de soja vapeur avec sel de mer',
-      price: 5.5,
+      name: 'Soupe Tibétaine',
+      description: 'Potage à la tomates fraîches, oeufs et coriandre',
+      price: 7.0,
+      image: '/src/assets/entree4.jpg'
+    },
+    {
+      id: 'e5',
+      name: 'Onion Bhajiya',
+      description: "Beignets d'oignons",
+      price: 6.90,
+      image: '/src/assets/entree4.jpg'
+    },
+    {
+      id: 'e6',
+      name: 'Pakora',
+      description: "Beignets d'aubergines, oignons et pommes de terre",
+      price: 7.50,
+      image: '/src/assets/entree4.jpg'
+    },
+    {
+      id: 'e7',
+      name: 'Végétable Samosa',
+      description: 'Friands farcis aux légumes et épices',
+      price: 7.80,
+      image: '/src/assets/entree4.jpg'
+    },
+    {
+      id: 'e8',
+      name: 'Zingas Pakoras',
+      description: 'Beignets de crevettes',
+      price: 9.90,
+      image: '/src/assets/entree4.jpg'
+    },
+    {
+      id: 'e9',
+      name: 'Mixte Entrées',
+      description: 'Assortiments de beignets poulet, poisson, crevettes et légumes',
+      price: 10.80,
       image: '/src/assets/entree4.jpg'
     }
   ];
 
-  const entreesSpecialesSushis = [
+  const entreesSpeciales = [
     {
       id: 'es1',
-      name: 'Entrée/Souper Saladés et Brioches',
-      description: 'Salade fraîche et brioches vapeur',
-      price: 9.5,
+      name: 'Poulet Tandoori',
+      description: 'Cuisse de poulet marinée aux épices et grillés au four Tandoori',
+      price: 8.80,
       image: '/src/assets/entree_special1.jpg'
     },
     {
       id: 'es2',
-      name: 'Tempura Mix',
-      description: 'Assortiment de légumes et crevettes en tempura',
-      price: 12.0,
+      name: 'Poulet Tikka',
+      description: 'Morceaux de poulet marinée et grillées au four Tandoor',
+      price: 9.50,
       image: '/src/assets/entree_special2.jpg'
     },
     {
       id: 'es3',
-      name: 'Tartare de Saumon',
-      description: 'Saumon frais coupé en dés avec avocat et sauce spéciale',
-      price: 13.5,
+      name: 'Kukhura ko Chhoila (Spécialité Népalaise)',
+      description: 'Morceaux de poulet désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé au four Tandoor',
+      price: 11.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es4',
+      name: 'Kukhura ko Sekuwa (Spécialité Népalaise)',
+      description: "Morceaux de poulet cuit et mélangé avec des épices de l'Himalaya",
+      price: 11.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es5',
+      name: 'Khasi ko Chhoila (Spécialité Népalaise)',
+      description: "Gigot d'agneau désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé au four Tandoor ",
+      price: 11.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es6',
+      name: ' Khasi ko Sekuwa (Spécialité Népalaise)',
+      description: "Gigot d'agneau cuit puis mélangé avec des épices de l'Himalaya",
+      price: 11.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es7',
+      name: 'Sheek Kebab',
+      description: "Brochette d'agneau haché coriandre et épices",
+      price: 10.00,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es8',
+      name: 'Agneau Tikka',
+      description: "Morceaux d'agneau marinés et grillés au four Tandoor",
+      price: 11.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es9',
+      name: 'Saumon Tikka',
+      description: 'Morceaux de saumon frais marinés et grillés au four de Tandoor',
+      price: 11.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es10',
+      name: 'Gambas Tandoori',
+      description: 'Gambas marinés et grillés au four Tandoor',
+      price: 21.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'es11',
+      name: 'Mix Grill',
+      description: 'Gambas, Saumon, Agneau et Poulet marinés et grillés au four Tandoor',
+      price: 22.90,
       image: '/src/assets/entree_special3.jpg'
     }
+
+  ];
+
+  const painsMaison = [
+    {
+      id: 'pm1',
+      name: 'Nan Nature',
+      description: 'Galette de farine de blé au levain',
+      price: 3.50,
+      image: '/src/assets/entree_special1.jpg'
+    },
+    {
+      id: 'pm2',
+      name: 'Chapatti',
+      description: 'Galette de farine de blé complet',
+      price: 3.50,
+      image: '/src/assets/entree_special2.jpg'
+    },
+    {
+      id: 'pm3',
+      name: 'Butter Nan',
+      description: 'Galette de farine de blé complet et au beurre',
+      price: 4.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm4',
+      name: 'Cheese Nan',
+      description: "Galette de farine de blé au levain, fourré au fromage",
+      price: 4.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm5',
+      name: 'Garlic Cheese Nan',
+      description: "Galette de farine de blé au levain, fourré au fromage et à l'ail ",
+      price: 5.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm6',
+      name: ' Nan Miel Cheese',
+      description: "Galette de farine de blé au levain, fourré au fromage et au miel",
+      price: 5.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm7',
+      name: 'Nan Garlic',
+      description: "Galette de farine de blé farcie à l'ail",
+      price: 4.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm8',
+      name: 'Timo',
+      description: "Tibétain préparé à la vapeur",
+      price: 4.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm9',
+      name: 'Keema Nan',
+      description: 'Galette de farine de blé au levain, fourré viande hachée',
+      price: 5.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm10',
+      name: 'Nan Maison',
+      description: 'Pain maison au fromage, ail, gingembre et coriandre',
+      price: 5.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm11',
+      name: 'Kulcha',
+      description: 'Pain traditionnel indien avec pommes de terre, petits pois et épices vertes',
+      price: 5.0,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'pm12',
+      name: 'Papadam',
+      description: 'Galette de lentilles et épices',
+      price: 1,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    
+
+
+  ];
+
+  const entreeTibetian = [
+    {
+      id: 'et1',
+      name: 'Soupe Tibétaine',
+      description: "omates fraîche oeufs et coriandre (Entrée)",
+      price: 7.00,
+      image: '/src/assets/entree_special1.jpg'
+    },
+    {
+      id: 'et2',
+      name: 'Motrak',
+      description: "Raviolis sautés aux légumes ou viande (Entrée)",
+      price: 7.90,
+      image: '/src/assets/entree_special2.jpg'
+    },
+    {
+      id: 'et3',
+      name: 'Shabaleb',
+      description: "Chaussons fourrés à la viande (Entrée)",
+      price: 7.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et4',
+      name: 'Tsel MoMo',
+      description: "Raviolis aux légumes cuit à la vapeur (Plat)",
+      price: 14.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et5',
+      name: 'Sha MoMo',
+      description: "Raviolis au boeuf cuit à la vapeur (Plat)",
+      price: 15.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et6',
+      name: 'Jhol MoMo',
+      description: "Un bouillon aux raviolis avec des épices (Plat)",
+      price: 17.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et7',
+      name: 'Chilly MoMo (Spécialité du chef Népalais)',
+      description: "avec poivrons, tomates oignons et épices de l'Himalaya (Plat)",
+      price: 17.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et8',
+      name: 'Thougnoe (Chaumins)',
+      description: "Pâtes et légumes sautées aux soja avec filet de poulet ou boeuf (Plat)",
+      price: 16.50,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et9',
+      name: 'Boeuthouk (THUPPA)',
+      description: 'UN Bol Tibétain à la base de soupe (bouillon) avec des pâtes, aux légumes et boeuf (Plat)',
+      price: 16.90,
+      image: '/src/assets/entree_special3.jpg'
+    },
+    {
+      id: 'et10',
+      name: 'Shamdre',
+      description: 'Filet de poulet ou boeuf et légumes sautes avec riz au sauce soja et oeufs comme omelette (Plat)',
+      price: 17.0,
+      image: '/src/assets/entree_special3.jpg'
+    }
+
   ];
 
   // Function to render menu items
@@ -221,16 +477,35 @@ const Menu = () => {
         {/* Entrées Simples Section */}
         <Row className="mb-5">
           <Col>
-            <h3 className="section-title mb-4">Entrées Simples</h3>
+            <h3 className="section-title fw-bold mb-4">Entrées/ Soupes / Salades et Beignets</h3>
             {renderMenuItems(entreesSimples)}
           </Col>
         </Row>
 
-        {/* Entrées Spéciales/Sushis Section */}
+        {/* Entrées Spéciales */}
         <Row className="mb-5">
           <Col>
-            <h3 className="section-title mb-4">Entrée Spécialités/Sushis</h3>
-            {renderMenuItems(entreesSpecialesSushis)}
+            <h3 className="section-title fw-bold
+             mb-4">Entrées Spécialités Tandoor</h3>
+            {renderMenuItems(entreesSpeciales)}
+          </Col>
+        </Row>
+
+          {/* Pains Maison */}
+          <Row className="mb-5">
+          <Col>
+            <h3 className="section-title fw-bold
+             mb-4">Pains Maison</h3>
+            {renderMenuItems(painsMaison)}
+          </Col>
+        </Row>
+
+        {/* Spécialités Tibétaines Entrée et Plats */}
+        <Row className="mb-5">
+          <Col>
+            <h3 className="section-title fw-bold
+             mb-4">Spécialités Tibétaines Entrée et Plats</h3>
+            {renderMenuItems(entreeTibetian)}
           </Col>
         </Row>
 
