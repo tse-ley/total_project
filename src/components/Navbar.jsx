@@ -24,32 +24,32 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/Accueil" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/Accueil" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Accueil
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 À Propos
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Menu" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/Menu" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Menu
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/reservation" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/reservation" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Reservation
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/commande" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/commande" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Commande
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link text-dark" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/contact" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
             </li>

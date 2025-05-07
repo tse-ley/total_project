@@ -1,13 +1,18 @@
-/* Global styles */
+:root {
+  --primary-bg: #e5c8a3;  /* beige background color */
+  --section-bg: #f5e5d0;  /* lighter beige for sections */
+  --text-color: #333333;  /* dark text */
+  --accent-color: #8b4513; /* brown accent */
+  --border-color: #d3b88e; /* lighter border color */
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  
-}
-
-body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
 /* Override Bootstrap container padding on smaller screens */
@@ -20,18 +25,35 @@ body {
 
 /* Custom background color */
 .bg-sagarmatha {
-  background-color: #F8C78B !important;
+  background-color: var(--primary-bg) !important;
 }
 
 /* Button hover effects */
 .btn-dark:hover {
-  background-color: #343a40;
+  background-color: #6d3710; /* Darker shade of accent color */
   transform: translateY(-2px);
   transition: all 0.2s ease;
 }
 
 /* Form control focus */
 .form-control:focus {
-  border-color: #F8C78B;
-  box-shadow: 0 0 0 0.25rem rgba(248, 199, 139, 0.25);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25); /* Accent color shadow */
+}
+
+/* Section background */
+.section-bg {
+  background-color: var(--section-bg);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Text and headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color);
+}
+
+p {
+  color: var(--text-color);
 }

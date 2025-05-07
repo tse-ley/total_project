@@ -8,7 +8,7 @@ import specialite2 from '../assets/momo2.jpg';
 import specialite3 from '../assets/thali1.jpg';
 
 const Menu = () => {
-  const { addToCart } = useCart(); // Use the addToCart function from CartContext
+  const { addToCart } = useCart(); 
 
   // Sample specialties for the carousel
   const specialites = [
@@ -29,6 +29,27 @@ const Menu = () => {
     {
       id: 's3',
       name: 'Spécialité 3',
+      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
+      price: 15.95,
+      image: specialite3
+    },
+    {
+      id: 's4',
+      name: 'Spécialité 4',
+      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
+      price: 15.95,
+      image: specialite3
+    },
+    {
+      id: 's5',
+      name: 'Spécialité 5',
+      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
+      price: 15.95,
+      image: specialite3
+    },
+    {
+      id: 's5',
+      name: 'Spécialité 6',
       description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
       price: 15.95,
       image: specialite3
@@ -126,43 +147,51 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <Container>
-        <h1 className="page-title mb-5">The taste of Sagarmatha</h1>
+        <h1 className="page-title mb-5">Le Goût de Sagarmatha</h1>
         
-        {/* Specialites Carousel */}
-        <h2 className="specialites-title">Spécialités</h2>
+        {/* Featured Items */}
         <Row className="mb-5">
-          <Col lg={10} className="mx-auto">
-            <Carousel className="specialites-carousel">
-              {[0, 3, 6].map((startIndex, idx) => (
-                <Carousel.Item key={idx}>
+          <Col>
+            <h3 className="text-center mb-4">Nos plats populaires</h3>
+            <Carousel indicators={false} interval={null}>
+              {specialites.reduce((rows, item, index) => {
+                if (index % 3 === 0) rows.push([]);
+                rows[rows.length - 1].push(item);
+                return rows;
+              }, []).map((row, rowIndex) => (
+                <Carousel.Item key={rowIndex}>
                   <Row>
-                    {[0, 1, 2].map((offset) => {
-                      const specialite = specialites[(startIndex + offset) % specialites.length];
-                      return (
-                        <Col md={4} key={specialite.id}>
-                          <div className="menu-item mb-3">
-                            <img 
-                              src={specialite.image} 
-                              alt={specialite.name} 
-                              className="menu-item-image w-100"
-                            />
-                            <div className="p-3">
-                              <h5>{specialite.name}</h5>
-                              <p className="menu-description small">{specialite.description}</p>
-                              <div className="d-flex justify-content-between align-items-center">
-                                <span className="menu-price">{specialite.price.toFixed(2)} €</span>
-                              </div>
+                    {row.map((item) => (
+                      <Col md={4} key={item.id}>
+                        <div className="menu-item">
+                          <img 
+                            src={item.image} 
+                            alt={item.name} 
+                            className="menu-item-image w-100"
+                          />
+                          <div className="p-3">
+                            <h5>{item.name}</h5>
+                            <p className="menu-description small">{item.description}</p>
+                            <div className="d-flex justify-content-between align-items-center">
+                              <span className="menu-price">{item.price.toFixed(2)} €</span>
+                              <button
+                                className="btn btn-sm add-to-cart"
+                                onClick={() => addToCart(item)} // Add item to cart
+                              >
+                                Ajouter au panier
+                              </button>
                             </div>
                           </div>
-                        </Col>
-                      );
-                    })}
+                        </div>
+                      </Col>
+                    ))}
                   </Row>
                 </Carousel.Item>
               ))}
             </Carousel>
           </Col>
         </Row>
+       
         
         {/* Menu Categories */}
         <Row className="mb-5">
@@ -205,19 +234,7 @@ const Menu = () => {
           </Col>
         </Row>
 
-        {/* Featured Items */}
-        <Row className="mb-5">
-          <Col>
-            <h3 className="text-center mb-4">Nos plats populaires</h3>
-            {renderMenuItems(specialites)}
-          </Col>
-        </Row>
-
-        <Row className="text-center my-5">
-          <Col>
-            <p className="text-muted">Lorem ipsum</p>
-          </Col>
-        </Row>
+        
       </Container>
     </div>
   );
