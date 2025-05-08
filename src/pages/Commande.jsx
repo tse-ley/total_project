@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
+import '../index.css'; // Import your CSS file
 import { useCart } from '../context/CartContext'; // Import useCart
 
 const Commande = () => {

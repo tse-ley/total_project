@@ -210,6 +210,147 @@ const MenuPlats = () => {
     
   ];
 
+  const platsBiryani = [
+    {
+      id: 'b1',
+      name: 'Biryani Légumes',
+      description: "Le royal biryani est un plat traditionnelle Indien préparé avec du riz basmati parfumé, différentes épices, des raisins sec, des noix de cajou, dans une sauce curry avec légumes.",
+      price: 14.90,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'b2',
+      name: 'Biryani Poulet',
+      description: "Le royal biryani est un plat traditionnelle Indien préparé avec du riz basmati parfumé, différentes épices, des raisins sec, des noix de cajou, dans une sauce curry avec poulet.",
+      price: 15.50,
+      image: '/images/momo.jpg',
+    },
+    {
+      id: 'b3',
+      name: 'Biryani Agneau ',
+      description: "Le royal biryani est un plat traditionnelle Indien préparé avec du riz basmati parfumé, différentes épices, des raisins sec, des noix de cajou, dans une sauce curry avec agneau.",
+      price: 17.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'b4',
+      name: 'Biryani Crevettes',
+      description: "Le royal biryani est un plat traditionnelle Indien préparé avec du riz basmati parfumé, différentes épices, des raisins sec, des noix de cajou, dans une sauce curry avec crevettes.",
+      price: 17.90,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'b5',
+      name: 'Biryani Maison',
+      description: "Le royal biryani est un plat traditionnelle Indien préparé avec du riz basmati parfumé, différentes épices, des raisins sec, des noix de cajou, dans une sauce curry avec agneau, poulet et crevettes.",
+      price: 19.00,
+      image: '/images/dal-bhat.jpg',
+    }
+    
+  ];
+
+  const legumesAccompagnements = [
+    {
+      id: 'l1',
+      name: 'Palak Panir',
+      description: "Curry d'épinards haché dans des cubes de formages fait maison et crème fraîche",
+      price: 11.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l2',
+      name: 'Aloo Matar',
+      description: "Pommes de terre et petits pois avec sauce curry",
+      price: 11.50,
+      image: '/images/momo.jpg',
+    },
+    {
+      id: 'l3',
+      name: 'Daal ',
+      description: "Curry de lentilles aromatisé avec ail, gingembre et coriandre",
+      price: 10.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l4',
+      name: 'Baigan Bharta',
+      description: "Fondue de caviar d'aubergines mijotée et parfumée avec épices",
+      price: 12.00,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l5',
+      name: 'Saag',
+      description: "Curry d'épinards avec herbes et épices",
+      price: 11.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l6',
+      name: 'Yogi Tarkari',
+      description: "Curry de légumes variés assaisonnés puis sautés avec des épices",
+      price: 11.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l7',
+      name: 'Daal Palak',
+      description: "Lentilles mijotées et épinards",
+      price: 11.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l8',
+      name: 'Vegetable Korma',
+      description: "Mélanges de légumes avec sauce aux noix de cajou, pistaches, amandes et crème fraîche",
+      price: 12.50,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'l9',
+      name: 'Butter Panir Masala',
+      description: "Fromage maison préparé avec sauce tomate et noix de cajou",
+      price: 13.00,
+      image: '/images/dal-bhat.jpg',
+    }
+     
+  ];
+
+  const rizAccompangnements = [
+    {
+      id: 'r1',
+      name: 'Riz Nature',
+      description: "Riz Basmati parfumée au vapeur.",
+      price: 4.0,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'r2',
+      name: 'Matar Pulao',
+      description: "Riz Basmati au safran sauté avec petits pois",
+      price: 5.0,
+      image: '/images/momo.jpg',
+    },
+    {
+      id: 'r3',
+      name: 'Kashmiri Pulao',
+      description: "Riz Basmati parfumée avec des fruits secs",
+      price: 5.0,
+      image: '/images/dal-bhat.jpg',
+    },
+    {
+      id: 'r4',
+      name: 'Jeera Rice',
+      description: "Riz Basmati sauté au cumin",
+      price: 5.0,
+      image: '/images/dal-bhat.jpg',
+    }
+    
+  ];
+
+
+
+
   return (
     <div className="menu-container">
       <Container>
@@ -266,6 +407,33 @@ const MenuPlats = () => {
         <MenuSection
                           title="Plats Daalbhat (Plat traditionnel Népalais)"
                           items={platsDaalbhat.map((item) => ({
+                            ...item,
+                            onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
+                          }))}
+                        />
+        <MenuSection
+                          title="Plats Biryani"
+                          items={platsBiryani.map((item) => ({
+                            ...item,
+                            onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
+                          }))}
+                        /><MenuSection
+                        title="Plats Biryani"
+                        items={platsBiryani.map((item) => ({
+                          ...item,
+                          onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
+                        }))}
+                      />
+        <MenuSection
+                          title="Legumes Accompagnements"
+                          items={legumesAccompagnements.map((item) => ({
+                            ...item,
+                            onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
+                          }))}
+                        />
+        <MenuSection
+                          title="Riz Accompagnements"
+                          items={rizAccompangnements.map((item) => ({
                             ...item,
                             onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
                           }))}

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import '../index.css';
 import mapImage from '../assets/maps.png';
 
 const Contact = () => {
   return (
-    <Container fluid className="py-4 flex-grow-1" style={{ backgroundColor: '#F8C78B', minHeight: '100vh' }}>
+    <Container fluid className="py-4 flex-grow-1">
         <Row className="justify-content-center">
           <Col md={10}>
             <Row>

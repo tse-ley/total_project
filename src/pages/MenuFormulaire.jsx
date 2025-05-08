@@ -5,94 +5,91 @@ import CartButton from '../components/CartButton';
 import '../Menu.css';
 
 const MenuFormulaires = () => {
-  // Sample data for set menus
+  // set menus
   const formulaires = [
     {
       id: 'f1',
-      name: 'Assiettte Midi 15.90€',
-      description: 'Formule déjeuner avec entrée au choix, plat principal et boisson',
-      price: 15.90,
+      name: 'Assiette Midi 13,90€',
+      description: 'Uniquement le midi, sauf week-end et jours fériés',
+      price: 13.90,
       entrees: [
-        'Salade verte',
-        'Soupe miso',
-        'Gyoza (3 pièces)'
+        'Daal ou Légumes Mixtes',
+        'Avec du Riz basmati'
       ],
       plats: [
-        'Poulet teriyaki',
-        'Bœuf sauté',
-        'Tofu frit'
+        'Poulet Tikka ou Poulet Tandoori au choix',
+        'Beignets Menu Express 14,90€Mixtes ',
+        'Samosa Légumes'
       ],
       desserts: [
-        'Mochi glacé',
-        'Dorayaki',
-        'Fruits frais'
+        'Dessert Gâteau Maison'
       ]
     },
     {
       id: 'f2',
-      name: 'Menu Express 18.90€',
-      description: 'Formule express avec entrée, plat et dessert au choix',
-      price: 18.90,
+      name: 'Menu Express 14,90€',
+      description: "Entrées + Plats ou Plats (servi avec du riz basmati) + Dessert au choix (Uniquement le midi, sauf week-end et jours fériés)",
+      price: 14.90,
       entrees: [
-        'Salade japonaise',
-        'Soupe miso',
-        'Gyoza (3 pièces)'
+        'Poulet Tandoori (Cuisse de poulet marinée aux épices et grillés au four Tandoor)',
+        'Vegetable Samosa (Friands farcis aux légumes et épices)',
+        'Soupe Tibétaine (Potage à la tomates fraîches, oeufs et coriandre)',
+        'Salade Népalaise (Concombres, Tomates, Carottes, Champignons noir et sauce sésame)'
       ],
       plats: [
-        'Poulet teriyaki',
-        'Bœuf sauté',
-        'Saumon grillé'
+        "Poulet au Curry (Filet de poulet avec une sauce traditionnelle indienne ou Agneau Curry Des cubes de Gigo d'agneau avec une sauce traditionnelle Indienne)",
+        "Fish Masala (Poisson, tomates, poivrons aux épices de l'Himalaya ou Daal PalakLentilles mijotées et épinards)"
       ],
       desserts: [
-        'Mochi glacé',
-        'Dorayaki',
-        'Fruits frais'
+        'Dessert de chef (Yaourt maison avec une boule de Pâtisserie)',
+        'Suji Halwa (Gâteau indien à la semoule ou Mango Ice-Cream)',
+        'Mango Ice cream (Glace vanille avec un coulis de mangue)'
       ]
     },
     {
       id: 'f3',
-      name: 'Menu Dégustation 26.90€',
-      description: 'Formule dégustation avec apéritif, entrée, plat et dessert au choix',
-      price: 26.90,
+      name: 'Menu Découverte 23,90€',
+      description: 'Formule découverte avec entrée, plat (servi avec du riz basmati sauf raviolis) et dessert au choix (Uniquement le midi, sauf week-end et jours fériés)',
+      price: 23.90,
       entrees: [
-        'Assortiment de sushis (6 pièces)',
-        'Tempura de crevettes',
-        'Salade de wakame'
+        "Seekh Kebab (Brochette d'agneau haché coriandre et épices)",
+        'Motrak (Raviolis sautés aux légumes ou viande )',
+        "Kukhura ko Sekuwa (Morceaux de poulet cuit et mélangé avec des épices de l'Himalaya)",
+        "Daal soupe(Potage aux lentilles à la façon Indienne)"
       ],
       plats: [
-        'Plat du chef',
-        'Poisson du jour',
-        'Spécialité Hinaton'
+        'Poulet Saag (Filet de poulet mélange avec des épinards, des épices et coriandre fraîche)',
+        "Agneau Vindaloo (Des cubes de gigot d'agneau avec pommes de terre et épices)",
+        "Raviolis Népalais (Raviolis à la viande ou aux légumes cuites à la vapeur)",
+        "Palak Panir (Curry d'épinards haché dans des cubes de formages fait maison et crème fraîche)"
       ],
       desserts: [
-        'Assortiment de mochis',
-        'Crème brûlée au matcha',
-        'Glaces japonaises'
+        'Sho Maison(Yaourt maison avec khabshe et miel)',
+        "Sorbets et Glace (Deux boules aux choix Mangue, Fruits de la Passion, Citron, Vanille, Chocolat et Noix de coco)",
+        "Suji Halwa (Gâteau indien à la semoule)"
       ]
     },
     {
       id: 'f4',
-      name: 'Menu Découverte 22.90€',
-      description: 'Formule découverte avec entrée, plat et dessert au choix',
-      price: 22.90,
+      name: 'Menu Dégustation 28,90 €',
+      description: "Formule dégustation avec entrée (Servis avec Nan nature / Nan Garlic / Nan fromage ou Nan Maison), plat et dessert au choix",
+      price: 28.90,
       entrees: [
-        'Salade de tofu',
-        'Gyoza (5 pièces)',
-        'Soupe miso spéciale'
+        'Poulet Tikka (Morceaux de poulet marinée et grillées au four Tandoor)',
+        "Khasi ko Chhoila (Gigot d'agneau désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé a four Tandoor ou Shabaleb Chaussons fourrés à la viande)",
+        "Baigan Bharta (Fondue de caviar d'aubergines crème fraîche)"
       ],
       plats: [
-        'Ramen au choix',
-        'Donburi au choix',
-        'Udon sauté'
+        "Crevettes au Curry (Crevettes décortiquées avec une sauce traditionnelle indienne ou Agneau Saag Des cubes de gigot d'agneau mélange avec des épinards, des épices et coriandre fraîche)",
+        "Butter Chicken (Poulet mariné et grillé puis cuit dans la sauce au beurre, crème fraîche, et noix de cajou)",
+        "Shamdre (Filet de poulet ou boeuf et légumes sautes avec riz au sauce soja et oeufs comme omelette)"
       ],
       desserts: [
-        'Taiyaki',
-        'Anmitsu',
-        'Mochi glacé'
+        'DESSERTS AU CHOIX à la carte'
       ]
     }
   ];
-
+  
   // Render a single formulaire card
   const renderFormulaireCard = (formulaire) => {
     return (
