@@ -38,11 +38,11 @@ const Navbar = () => {
                 Menu
               </Link>
             </li>
-            <li className="nav-item">
+            {/*<li className="nav-item">
               <Link to="/reservation" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Reservation
               </Link>
-            </li>
+            </li>*/}
             <li className="nav-item">
               <Link to="/commande" className="nav-link fw-bold text-dark" onClick={() => setIsMenuOpen(false)}>
                 Commande
