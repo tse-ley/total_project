@@ -1,9 +1,10 @@
 :root {
   --primary-bg: #e5c8a3;  /* beige background color */
   --section-bg: #f5e5d0;  /* lighter beige for sections */
-  --text-color: #333333;  /* dark text */
+  --text-color: ##1a1a1a;  /* dark text */
   --accent-color: #8b4513; /* brown accent */
   --border-color: #d3b88e; /* lighter border color */
+  --box-color: #bda17c; /* light brown for boxes */
 }
 
 html, body, #root {

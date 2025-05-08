@@ -353,7 +353,7 @@ const Menu = () => {
     },
     {
       id: 'et9',
-      name: 'Boeuthouk (THUPPA)',
+      name: 'Boeuthouk (Thukpa)',
       description: 'UN Bol Tibétain à la base de soupe (bouillon) avec des pâtes, aux légumes et boeuf (Plat)',
       price: 16.90,
       image: '/src/assets/entree_special3.jpg'
@@ -375,11 +375,11 @@ const Menu = () => {
         {items.map((item) => (
           <Col key={item.id}>
             <div className="menu-item">
-              <img 
+              {/*<img 
                 src={item.image} 
                 alt={item.name} 
                 className="menu-item-image w-100"
-              />
+              />*/}
               <div className="p-3">
                 <h5>{item.name}</h5>
                 <p className="menu-description small">{item.description}</p>
@@ -405,56 +405,56 @@ const Menu = () => {
       <Container>
         <h1 className="page-title mb-5">Le Goût de Sagarmatha</h1>
         
-        
-           {/* Featured Items */}
-              <Row className="mb-5">
-                <Col>
-                  <h3 className="text-center mb-4">Nos plats populaires</h3>
-                  <div className="position-relative">
-                    <Carousel 
-                      indicators={true} 
-                      interval={null}
-                      prevIcon={<span className="carousel-control-prev-icon position-absolute start-0 top-50 translate-middle-y" style={{ marginLeft: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
-                      nextIcon={<span className="carousel-control-next-icon position-absolute end-0 top-50 translate-middle-y" style={{ marginRight: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
-                    >
-                      {specialites.reduce((rows, item, index) => {
-                        if (index % 3 === 0) rows.push([]);
-                        rows[rows.length - 1].push(item);
-                        return rows;
-                      }, []).map((row, rowIndex) => (
-                        <Carousel.Item key={rowIndex}>
-                          <Row>
-                            {row.map((item) => (
-                              <Col md={4} key={item.id}>
-                                <div className="menu-item">
-                                  <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="menu-item-image w-100"
-                                  />
-                                  <div className="p-3">
-                                    <h5>{item.name}</h5>
-                                    <p className="menu-description small">{item.description}</p>
-                                    <div className="d-flex justify-content-between align-items-center">
-                                      <span className="menu-price">{item.price.toFixed(2)} €</span>
-                                      <button
-                                        className="btn btn-sm add-to-cart"
-                                        onClick={() => addToCart(item)} // Add item to cart
-                                      >
-                                        Ajouter au panier
-                                      </button>
-                                    </div>
-                                  </div>
+       
+        {/* Featured Items */}
+          <Row className="mb-5">
+            <Col>
+              <h3 className="text-center mb-4">Nos plats populaires</h3>
+              <div className="position-relative">
+                <Carousel 
+                  indicators={true} 
+                  interval={null}
+                  prevIcon={<span className="carousel-control-prev-icon position-absolute start-0 top-50 translate-middle-y" style={{ marginLeft: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
+                  nextIcon={<span className="carousel-control-next-icon position-absolute end-0 top-50 translate-middle-y" style={{ marginRight: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
+                >
+                  {specialites.reduce((rows, item, index) => {
+                    if (index % 3 === 0) rows.push([]);
+                    rows[rows.length - 1].push(item);
+                    return rows;
+                  }, []).map((row, rowIndex) => (
+                    <Carousel.Item key={rowIndex}>
+                      <Row>
+                        {row.map((item) => (
+                          <Col md={4} key={item.id}>
+                            <div className="menu-item">
+                              <img
+                                src={item.image}
+                                alt={item.name}
+                                className="menu-item-image w-100"
+                              />
+                              <div className="p-3">
+                                <h5>{item.name}</h5>
+                                <p className="menu-description small">{item.description}</p>
+                                <div className="d-flex justify-content-between align-items-center">
+                                  <span className="menu-price">{item.price.toFixed(2)} €</span>
+                                  <button
+                                    className="btn btn-sm add-to-cart"
+                                    onClick={() => addToCart(item)} // Add item to cart
+                                  >
+                                    Ajouter au panier
+                                  </button>
                                 </div>
-                              </Col>
-                            ))}
-                          </Row>
-                        </Carousel.Item>
-                      ))}
-                    </Carousel>
-                  </div>
-                </Col>
-              </Row>
+                              </div>
+                            </div>
+                          </Col>
+                        ))}
+                      </Row>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </div>
+            </Col>
+          </Row>
        
         
         {/* Menu Categories */}
