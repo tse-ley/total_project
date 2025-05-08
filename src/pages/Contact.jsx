@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import '../index.css';
-import mapImage from '../assets/maps.png';
 
 const Contact = () => {
   return (
@@ -25,14 +24,16 @@ const Contact = () => {
                   <p>Hours: 12:00-11:00pm</p>
                 </div>
                 
-                {/* Map Image */}
-                <div className="mt-3">
-                  <img 
-                    src={mapImage} 
-                    alt="Restaurant Location Map" 
-                    className="img-fluid border"
-                    style={{ maxHeight: '200px', width: '100%', objectFit: 'cover' }}
-                  />
+                <div className="mt-3 border rounded overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.278824771137!2d2.2978728!3d48.8452089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67011d7ee8c0d%3A0x6d5d6e6b91ad2bc5!2s2%20Rue%20Fran%C3%A7ois%20Mouthon%2C%2075015%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1683563784157!5m2!1sen!2sus"
+                    width="100%" 
+                    height="250" 
+                    style={{ border: 0 }} 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </Col>
               

@@ -27,7 +27,7 @@ const Home = () => {
         />
         <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
           <h1 className="display-4 text-white fw-bold">
-            Bienvenue au Restaurant Népalais
+            Bienvenue au Restaurant Sagarmatha
           </h1>
           <p className="display-7 text-white" >
             Découvrez les saveurs authentiques du Népal
@@ -46,9 +46,9 @@ const Home = () => {
       <div className="container-fluid py-5">
         {/* Intro Section */}
         <section className="mb-5 text-center">
-          <h1 className="h3 fw-bold mb-3" >
-            Sagarmatha
-          </h1>
+          <h2 className=" h4 fw-bold mb-3 " >
+          Saveurs d'Altitude : L'Héritage Culinaire du Toit du Monde
+          </h2>
           <p className="text-bold mb-3" style={{ color: 'var(--text-color)' }}>
             Bienvenue dans notre cuisine de l’Himalaya – fait maison, fait avec cœur.
           </p>

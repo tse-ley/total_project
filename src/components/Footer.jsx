@@ -6,9 +6,10 @@ const Footer = () => {
     <footer className="bg-dark text-white py-4">
       <div className="container">
         <div className="row mb-3">
-          {/* Logo */}
-          <div className="col-md-3 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-start">
+         {/* Logo */}
+          <div className="col-md-3 mb-3 mb-md-0 d-flex flex-column justify-content-center justify-content-md-start align-items-center align-items-md-start">
             <img src={logo} alt="Restaurant Logo" style={{ height: '50px' }} />
+            <p className="mt-2 text-white lead text-center text-md-start" style={{ fontSize: '0.9rem', maxWidth: '250px' }}>Sagarmatha : Une Odyssée des Sens au Cœur de l'Himalaya</p>
           </div>
 
           {/* Opening Hours */}
@@ -39,7 +40,7 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="col-md-3 mb-3 mb-md-0 text-center text-md-end">
+          <div className="col-md-3 mb-3 mb-md-0 text-center text-md-start">
             <h5 className="fs-6 mb-2 text-white">Adresse</h5>
             <p className="mb-0 small text-white">2 Rue François Mouthon, 75015 Paris</p>
           </div>
