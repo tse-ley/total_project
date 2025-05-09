@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import restaurantImage from '../assets/IMG_3823.JPG';
-import thaliPlatterImage from '../assets/main.JPG';
-import momoImage from '../assets/momo.jpg';
-import curryImage from '../assets/IMG_3849.JPG';
-import tandoriImage from '../assets/IMG_3841.JPG';
-import templeInteriorImage from '../assets/restro1.JPG';
-import crevetteImage from '../assets/IMG_3844.JPG';
-import restroImage from '../assets/IMG_3818.JPG';
-import ambianceImage from '../assets/restro2.JPG';
-import viewImage from '../assets/restro4.JPG';
-import '../index.css'; // Import your CSS file
+import restaurantImage from '../assets/restro/IMG_3823.JPG';
+import thaliPlatterImage from '../assets/cuisine/main.JPG';
+import samosaImage from '../assets/cuisine/samosa.jpeg';
+import curryImage from '../assets/cuisine/IMG_3849.JPG';
+import platsImage from '../assets/cuisine/dish2.jpeg';
+import templeInteriorImage from '../assets/restro/restro1.JPG';
+import lassiImage from '../assets/cuisine/lassi.jpeg';
+import restroImage from '../assets/restro/restro3.jpeg';
+import ambianceImage from '../assets/cuisine/dish6.jpeg';
+import viewImage from '../assets/cuisine/dish4.jpeg';
+import '../index.css'; 
 const About = () => {
   return (
     <div className="min-vh-100 d-flex flex-column">
@@ -162,16 +162,16 @@ const About = () => {
           <div className="row row-cols-2 row-cols-md-4 g-3">
             <div className="col">
               <img 
-                src={momoImage} 
-                alt="Momos" 
+                src={samosaImage} 
+                alt="samosa" 
                 className="img-fluid rounded shadow" 
                 style={{ height: '10rem', width: '100%', objectFit: 'cover' }}
               />
             </div>
             <div className="col">
               <img 
-                src={tandoriImage} 
-                alt="Tandori" 
+                src={platsImage} 
+                alt="food" 
                 className="img-fluid rounded shadow" 
                 style={{ height: '10rem', width: '100%', objectFit: 'cover' }}
               />
@@ -186,8 +186,8 @@ const About = () => {
             </div>
             <div className="col">
               <img 
-                src={crevetteImage} 
-                alt="Épices" 
+                src={lassiImage} 
+                alt="lassi" 
                 className="img-fluid rounded shadow" 
                 style={{ height: '10rem', width: '100%', objectFit: 'cover' }}
               />

@@ -3,10 +3,12 @@ import { Container, Row, Col, Nav, Tab, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext'; 
 import '../Menu.css'; 
-import specialite1 from '../assets/momo.jpg';
-import specialite2 from '../assets/momo2.jpg';
-import specialite3 from '../assets/thali1.jpg';
-
+import pouletImage from '../assets/cuisine/chickentandoori.jpeg';
+import shrimpImage from '../assets/cuisine/shrimp.jpeg';
+import poissonImage from '../assets/cuisine/poisson.jpeg';
+import alooImage from '../assets/cuisine/alooMatar.jpeg';
+import butterChickenImage from '../assets/cuisine/ButterChicken.jpeg';
+import choilaImage from '../assets/cuisine/choila.jpeg';
 const Menu = () => {
   const { addToCart } = useCart(); 
 
@@ -14,45 +16,45 @@ const Menu = () => {
   const specialites = [
     {
       id: 's1',
-      name: 'Spécialité 1',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
-      price: 14.95,
-      image: specialite1
+      name: 'Poulet Tandoori',
+      description: 'Cuisse de poulet marinée aux épices et grillés au four Tandoori.',
+      price: 8.80,
+      image: pouletImage
     },
     {
       id: 's2',
-      name: 'Spécialité 2',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
-      price: 16.95,
-      image: specialite2
+      name: 'Jhinga Curry',
+      description: 'Crevettes décortiquées servi avec une sauce traditionnelle Indienne',
+      price: 15.50,
+      image: shrimpImage
     },
     {
       id: 's3',
-      name: 'Spécialité 3',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
+      name: 'Fish Bengali',
+      description: 'Poisson en sauce avec de la menthe, tomates et noix de coco.',
       price: 15.95,
-      image: specialite3
+      image: poissonImage
     },
     {
       id: 's4',
-      name: 'Spécialité 4',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
-      price: 15.95,
-      image: specialite3
+      name: 'Aloo Matar',
+      description: 'Pommes de terre et petits pois avec sauce curry',
+      price: 11.50,
+      image: alooImage
     },
     {
       id: 's5',
-      name: 'Spécialité 5',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
+      name: 'Butter Chicken',
+      description: 'Poulet mariné et grillé puis cuit dans la sauce au beurre, crème fraîche, et noix de cajou',
       price: 15.95,
-      image: specialite3
+      image: butterChickenImage
     },
     {
       id: 's5',
-      name: 'Spécialité 6',
-      description: 'Une description détaillée de notre spécialité avec les ingrédients et la préparation.',
-      price: 15.95,
-      image: specialite3
+      name: 'Kukhura ko Chhoila (Spécialité Népalaise)',
+      description: 'Morceaux de poulet désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé au four Tandoor',
+      price: 11.50,
+      image: choilaImage
     }
   ];
 

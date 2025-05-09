@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/hero.JPG';
-import momoImage from '../assets/momo.jpg'; 
-import thaliImage from '../assets/thali1.jpg'; 
-import templeImage from '../assets/temple.jpg';
-import spiceImage from '../assets/IMG_3859.JPG';
-import crevetteImage from '../assets/IMG_3844.JPG';
-import rotiImage from '../assets/IMG_3858.JPG';
-import curryImage from '../assets/IMG_3849.JPG';
+import heroImage from '../assets/cuisine/hero.JPG';
+import momoImage from '../assets/cuisine/momo.jpeg'; 
+import thaliImage from '../assets/cuisine/thali1.jpeg'; 
+import templeImage from '../assets/restro/temple.jpeg';
+import spiceImage from '../assets/cuisine/momo2.jpeg';
+import foodImage from '../assets/cuisine/dish2.jpeg';
+import dishImage from '../assets/cuisine/dish1.jpeg';
+import dessertImage from '../assets/cuisine/dessert.jpeg';
 import '../index.css'; // Import your CSS file
 
 const Home = () => {
@@ -126,7 +126,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="bg-opacity-25 p-4 rounded shadow h-100" style={{ backgroundColor: 'var(--border-color)' }}>
                 <div className="row g-2 mb-3">
-                  {[spiceImage, crevetteImage, rotiImage, curryImage].map((img, idx) => (
+                  {[spiceImage, foodImage, dishImage, dessertImage].map((img, idx) => (
                     <div className="col-6" key={idx}>
                       <img 
                         src={img} 
