@@ -12,16 +12,16 @@ const Contact = () => {
               <Col md={5} className="mb-4">
                 <h5 className="mb-4">Find us at</h5>
                 <div className="d-flex align-items-start mb-2">
-                  <i className="bi bi-geo-alt me-2 mt-1"></i>
+                  <i className="bi bi-geo-alt me-2 "></i>
                   <p>2 Rue François Mouthon, 75015 Paris</p>
                 </div>
                 <div className="d-flex align-items-start mb-2">
-                  <i className="bi bi-telephone me-2 mt-1"></i>
-                  <p>Phone: <a href="tel:+33904260113" className="text-dark">+33 904260113</a></p>
+                  <i className="bi bi-telephone me-2 "></i>
+                  <p>Phone: <a href="tel:+33145305363" className="text-dark">+33145305363</a></p>
                 </div>
                 <div className="d-flex align-items-start mb-3">
-                  <i className="bi bi-clock me-2 mt-1"></i>
-                  <p>Hours: 12:00-11:00pm</p>
+                  <i className="bi bi-clock me-2 "></i>
+                  <p>Hours: 12:00pm - 11:00pm</p>
                 </div>
                 
                 <div className="mt-3 border rounded overflow-hidden">
@@ -40,8 +40,8 @@ const Contact = () => {
               {/* Right Side - Contact Form */}
               <Col md={7}>
                 <div className="bg-white p-4 rounded">
-                  <h6 className="text-center mb-3">--Feedback / Complaints</h6>
-                  <h5 className="text-center mb-4">REACH US</h5>
+                  <h6 className="text-center mb-3">--Retours / Réclamations</h6>
+                  <h5 className="text-center mb-4">CONTACTEZ-NOUS</h5>
                   
                   <Form>
                     <Form.Group className="mb-3">

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import restaurantImage from '../assets/IMG_3823.JPG';
-import thaliPlatterImage from '../assets/thali1.jpg';
+import thaliPlatterImage from '../assets/main.JPG';
 import momoImage from '../assets/momo.jpg';
 import curryImage from '../assets/IMG_3849.JPG';
 import tandoriImage from '../assets/IMG_3841.JPG';
-import templeInteriorImage from '../assets/IMG_3824.JPG';
+import templeInteriorImage from '../assets/restro1.JPG';
 import crevetteImage from '../assets/IMG_3844.JPG';
 import restroImage from '../assets/IMG_3818.JPG';
+import ambianceImage from '../assets/restro2.JPG';
+import viewImage from '../assets/restro4.JPG';
+import '../index.css'; // Import your CSS file
 const About = () => {
   return (
     <div className="min-vh-100 d-flex flex-column">
@@ -39,14 +42,14 @@ const About = () => {
                 />
               </div>
               <div className="col-md-6">
-                <h2 className="fs-2 fw-bold text-dark mb-4">NOUS CONNAÎTRE</h2>
+                <h2 className="fs-2 fw-bold mb-4">NOUS CONNAÎTRE</h2>
                 <p className="text-secondary text-dark mb-3">
                   Plongez dans une expérience himalayenne authentique au cœur de Paris. Notre restaurant puise son essence directement dans les traditions culinaires du Népal, du Tibet et de l'Inde du Nord. Nos chefs, originaires de ces régions montagneuses, maîtrisent des recettes transmises de génération en génération et préparent chaque plat avec des épices importées directement de l'Himalaya. Nous sélectionnons rigoureusement nos ingrédients : des légumes et fruits frais du marché aux viandes de première qualité, tout est choisi pour respecter l'authenticité de notre cuisine. Notre cuisine moderne est spécialement conçue pour préserver la qualité et les arômes de chaque ingrédient, tandis que nos dégustations régulières garantissent l'excellence constante de nos plats.
                 </p>
                 <p className="text-secondary text-dark mb-3">
                   À Sagarmatha, nous ne servons pas simplement des repas - nous créons des souvenirs culinaires inoubliables, où chaque bouchée vous transporte au pied des plus hauts sommets du monde.
                 </p>
-                <p className="text-secondary text-dark mb-3">
+                <p className="fst-italic text-dark mb-3">
                   Bien plus qu'un restaurant, une véritable immersion dans l'âme de l'Himalaya.
                 </p>
               </div>
@@ -56,7 +59,7 @@ const About = () => {
         <section className="mb-5">
           <div className="row align-items-start g-4">
     <div className="col-md-6">
-      <h2 className="fs-2 fw-bold text-dark mb-4">VUE SUR L'HIMALAYA</h2>
+      <h2 className="fs-2 fw-bold mb-4">VUE SUR L'HIMALAYA</h2>
       <p className="text-secondary text-dark mb-3">
         Chez Sagarmatha, nous vous offrons bien plus qu'un repas - une véritable évasion au cœur des montagnes sacrées. Notre décor vous transporte dans l'atmosphère envoûtante de l'Himalaya avec ses moulins à prières tournants, ses tentures colorées et ses motifs traditionnels népalais.
       </p>
@@ -82,7 +85,7 @@ const About = () => {
 
         {/* Enjoy the Ambiance Section */}
         <section className="mb-5 py-4">
-          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
+          <h2 className="fs-2 fw-bold mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
           <div className="row g-4">
             <div className="col-md-4">
               <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
@@ -105,7 +108,7 @@ const About = () => {
             <div className="col-md-4">
               <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
-                  src={restaurantImage} 
+                  src={viewImage} 
                   alt="Ambiance du restaurant" 
                   className="card-img-top" 
                   style={{ height: '16rem', objectFit: 'cover' }}
@@ -123,7 +126,7 @@ const About = () => {
             <div className="col-md-4">
               <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
-                  src={templeInteriorImage} 
+                  src={ambianceImage} 
                   alt="Décorations traditionnelles" 
                   className="card-img-top" 
                   style={{ height: '16rem', objectFit: 'cover' }}
@@ -132,7 +135,7 @@ const About = () => {
                   <p className="card-text text-dark text-secondary">
                   Que ce soit pour un dîner romantique, une sortie entre amis ou un repas familial, l'esprit chaleureux de l'Himalaya vous accompagnera tout au long de votre expérience culinaire.
                   </p>
-                  <p className="card-text text-dark text-secondary">
+                  <p className="card-text text-dark fst-italic">
                   "Ici, le temps semble suspendu le temps d'un repas, le temps d'un voyage..."
                   </p>
                 </div>
@@ -143,15 +146,19 @@ const About = () => {
 
         {/* Our Cuisine Section */}
         <section className="py-4">
-          <h2 className="fs-2 fw-bold text-dark mb-4 text-center">NOTRE CUISINE</h2>
+          <h2 className="fs-2 fw-bold mb-4 text-center">NOTRE CUISINE</h2>
           <p className="text-secondary text-dark text-center mb-4">
           Nous importons nos épices directement des contreforts de l'Himalaya et sélectionnons nos viandes et légumes avec la même rigueur que pour notre propre table. Notre cuisine ouverte vous invite à découvrir la chorégraphie de nos chefs, véritable spectacle vivant où l'art culinaire se dévoile.
 
           "Une cuisine sans artifice, où seul compte l'authenticité des saveurs et la générosité des portions."
 
-          Le saviez-vous ? Notre four tandoor, fabriqué sur mesure au Népal, atteint les 480°C pour donner à nos pains naan cette texture inimitable !
 
           </p>
+
+          <p className="text-center text-dark fst-italic">
+          Le saviez-vous ? Notre four tandoor, fabriqué sur mesure au Népal, atteint les 480°C pour donner à nos pains naan cette texture inimitable !
+                  
+           </p>
           <div className="row row-cols-2 row-cols-md-4 g-3">
             <div className="col">
               <img 

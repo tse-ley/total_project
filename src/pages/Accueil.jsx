@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/hero-food.jpg';
+import heroImage from '../assets/hero.JPG';
 import momoImage from '../assets/momo.jpg'; 
 import thaliImage from '../assets/thali1.jpg'; 
 import templeImage from '../assets/temple.jpg';
@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-warning bg-opacity-10 d-flex flex-column min-vh-100">
+    <div className=" bg-opacity-10 d-flex flex-column min-vh-100">
       {/* Hero Section */}
       <div className="position-relative mb-5">
         <img 
@@ -51,21 +51,21 @@ const Home = () => {
       <div className="container py-5">
         {/* Intro Section */}
         <section className="mb-5 text-center">
-          <h2 className="h3 fw-bold mb-3">
+          <h2 className="h3 fw-bold mb-3" style={{ color: 'var(--accent-color)' }}>
             Saveurs d'Altitude : L'Héritage Culinaire du Toit du Monde
           </h2>
           <p className="fw-bold mb-3" style={{ color: 'var(--text-color)' }}>
             Bienvenue dans notre cuisine de l'Himalaya – fait maison, fait avec cœur.
           </p>
           <p className="mb-3" style={{ color: 'var(--text-color)', maxWidth: '900px', margin: '0 auto' }}>
-            Voyagez au cœur des saveurs authentiques de l'Himalaya avec Sagarmatha, premier restaurant népalais de Paris. Notre carte vous invite à explorer une riche diversité culinaire, mêlant les traditions du Népal, du Tibet, du Bhoutan et de l'Inde du Nord, le tout préparé "comme à la maison".
+            Voyagez au cœur des saveurs authentiques de l'Himalaya avec Sagarmatha, premier restaurant népalais de Paris. Notre carte vous invite à explorer une riche diversité culinaire, mêlant les traditions du Népal, du Tibet et de l'Inde du Nord, le tout préparé "comme à la maison".
           </p>
         </section>
 
         {/* Temple Section */}
         <section className="row align-items-center mb-5 py-4">
           <div className="col-md-6 mb-4 mb-md-0 pe-md-5">
-            <h2 className="h3 fw-bold mb-3">
+            <h2 className="h3 fw-bold mb-3" style={{ color: 'var(--accent-color)' }}>
               Découvrez notre Culture
             </h2>
             <p className="mb-4" style={{ color: 'var(--text-color)' }}>
@@ -91,7 +91,7 @@ const Home = () => {
 
         {/* Menu Preview */}
         <section className="mb-5 py-4">
-          <h2 className="h3 fw-bold mb-4 text-center">Nos Spécialités</h2>
+          <h2 className="h3 fw-bold mb-4 text-center" style={{ color: 'var(--accent-color)' }} >Nos Spécialités</h2>
           <div className="row g-4">
             <div className="col-md-4">
               <div className="bg-opacity-25 p-4 rounded shadow h-100" style={{ backgroundColor: 'var(--border-color)' }}>

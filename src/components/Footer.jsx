@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/image.jpg';
 
 const Footer = () => {
   return (
@@ -13,11 +13,13 @@ const Footer = () => {
           </div>
 
           {/* Opening Hours */}
-          <div className="col-md-3 mb-3 mb-md-0 text-center text-md-start">
-            <h5 className="fs-6 mb-2 text-white">Heures d'ouverture</h5>
-            <p className="mb-1 small text-white">Mardi - Dimanche : 12H - 14h30</p>
-            <p className="mb-1 small text-white">Mardi - Jeudi : 18H30 - 23H</p>
-            <p className="mb-0 small text-white">Vendredi - Dimanche : 18H30 - 23H30</p>
+          <div className="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+            <h5 className="fs-6 mb-3 text-white fw-bold">Heures d'ouverture</h5>
+            <div className="d-flex flex-column gap-2">
+              <p className="mb-0 small text-white">Mardi - Samedi :<br />12H - 14H30 / 18H30 - 23H</p>
+              <p className="mb-0 small text-white">Vendredi - Dimanche :<br />12H - 14H30 / 18H30 - 23H15</p>
+              <p className="mb-0 small text-white">Lundi : Fermé</p>
+            </div>
           </div>
 
           {/* Social Icons */}
@@ -32,7 +34,7 @@ const Footer = () => {
                 <i className="bi bi-twitter fs-4" aria-hidden="true"></i>
                 <span className="visually-hidden">Twitter</span>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <a href="https://www.instagram.com/sagarmatha75015/" target="_blank" rel="noopener noreferrer" className="text-white">
                 <i className="bi bi-instagram fs-4" aria-hidden="true"></i>
                 <span className="visually-hidden">Instagram</span>
               </a>
