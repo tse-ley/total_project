@@ -9,6 +9,7 @@ import poissonImage from '../assets/cuisine/poisson.jpeg';
 import alooImage from '../assets/cuisine/alooMatar.jpeg';
 import butterChickenImage from '../assets/cuisine/ButterChicken.jpeg';
 import choilaImage from '../assets/cuisine/choila.jpeg';
+
 const Menu = () => {
   const { addToCart } = useCart(); 
 
@@ -50,7 +51,7 @@ const Menu = () => {
       image: butterChickenImage
     },
     {
-      id: 's5',
+      id: 's6',
       name: 'Kukhura ko Chhoila (Spécialité Népalaise)',
       description: 'Morceaux de poulet désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé au four Tandoor',
       price: 11.50,
@@ -203,7 +204,6 @@ const Menu = () => {
       price: 22.90,
       image: '/src/assets/entree_special3.jpg'
     }
-
   ];
 
   const painsMaison = [
@@ -291,16 +291,13 @@ const Menu = () => {
       price: 1,
       image: '/src/assets/entree_special3.jpg'
     },
-    
-
-
   ];
 
   const entreeTibetian = [
     {
       id: 'et1',
       name: 'Soupe Tibétaine',
-      description: "omates fraîche oeufs et coriandre (Entrée)",
+      description: "Tomates fraîche oeufs et coriandre (Entrée)",
       price: 7.00,
       image: '/src/assets/entree_special1.jpg'
     },
@@ -367,7 +364,6 @@ const Menu = () => {
       price: 17.0,
       image: '/src/assets/entree_special3.jpg'
     }
-
   ];
 
   // Function to render menu items
@@ -384,12 +380,12 @@ const Menu = () => {
               />*/}
               <div className="p-3">
                 <h5>{item.name}</h5>
-                <p className="menu-description small">{item.description}</p>
+                <p className="menu-description">{item.description}</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <span className="menu-price">{item.price.toFixed(2)} €</span>
                   <button
                     className="btn btn-sm add-to-cart"
-                    onClick={() => addToCart(item)} // Add item to cart
+                    onClick={() => addToCart(item)}
                   >
                     Ajouter au panier
                   </button>
@@ -407,57 +403,55 @@ const Menu = () => {
       <Container>
         <h1 className="page-title mb-5">Le Goût de Sagarmatha</h1>
         
-       
         {/* Featured Items */}
-          <Row className="mb-5">
-            <Col>
-              <h3 className="text-center mb-4">Nos plats populaires</h3>
-              <div className="position-relative">
-                <Carousel 
-                  indicators={true} 
-                  interval={null}
-                  prevIcon={<span className="carousel-control-prev-icon position-absolute start-0 top-50 translate-middle-y" style={{ marginLeft: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
-                  nextIcon={<span className="carousel-control-next-icon position-absolute end-0 top-50 translate-middle-y" style={{ marginRight: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
-                >
-                  {specialites.reduce((rows, item, index) => {
-                    if (index % 3 === 0) rows.push([]);
-                    rows[rows.length - 1].push(item);
-                    return rows;
-                  }, []).map((row, rowIndex) => (
-                    <Carousel.Item key={rowIndex}>
-                      <Row>
-                        {row.map((item) => (
-                          <Col md={4} key={item.id}>
-                            <div className="menu-item">
-                              <img
-                                src={item.image}
-                                alt={item.name}
-                                className="menu-item-image w-100"
-                              />
-                              <div className="p-3">
-                                <h5>{item.name}</h5>
-                                <p className="menu-description small">{item.description}</p>
-                                <div className="d-flex justify-content-between align-items-center">
-                                  <span className="menu-price">{item.price.toFixed(2)} €</span>
-                                  <button
-                                    className="btn btn-sm add-to-cart"
-                                    onClick={() => addToCart(item)} // Add item to cart
-                                  >
-                                    Ajouter au panier
-                                  </button>
-                                </div>
+        <Row className="mb-5">
+          <Col>
+            <h3 className="specialites-title mb-4">Nos plats populaires</h3>
+            <div className="position-relative">
+              <Carousel 
+                indicators={true} 
+                interval={null}
+                prevIcon={<span className="carousel-control-prev-icon position-absolute start-0 top-50 translate-middle-y" style={{ marginLeft: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
+                nextIcon={<span className="carousel-control-next-icon position-absolute end-0 top-50 translate-middle-y" style={{ marginRight: "-30px", filter: "invert(0.5)", zIndex: "5" }} />}
+              >
+                {specialites.reduce((rows, item, index) => {
+                  if (index % 3 === 0) rows.push([]);
+                  rows[rows.length - 1].push(item);
+                  return rows;
+                }, []).map((row, rowIndex) => (
+                  <Carousel.Item key={rowIndex}>
+                    <Row>
+                      {row.map((item) => (
+                        <Col md={4} key={item.id}>
+                          <div className="menu-item">
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="menu-item-image w-100"
+                            />
+                            <div className="p-3">
+                              <h5>{item.name}</h5>
+                              <p className="menu-description">{item.description}</p>
+                              <div className="d-flex justify-content-between align-items-center">
+                                <span className="menu-price">{item.price.toFixed(2)} €</span>
+                                <button
+                                  className="btn btn-sm add-to-cart"
+                                  onClick={() => addToCart(item)}
+                                >
+                                  Ajouter au panier
+                                </button>
                               </div>
                             </div>
-                          </Col>
-                        ))}
-                      </Row>
-                    </Carousel.Item>
-                  ))}
-                </Carousel>
-              </div>
-            </Col>
-          </Row>
-       
+                          </div>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+          </Col>
+        </Row>
         
         {/* Menu Categories */}
         <Row className="mb-5">
@@ -487,39 +481,42 @@ const Menu = () => {
         {/* Entrées Simples Section */}
         <Row className="mb-5">
           <Col>
-            <h3 className="section-title fw-bold mb-4">Entrées/ Soupes / Salades et Beignets</h3>
-            {renderMenuItems(entreesSimples)}
+            <div className="menu-section">
+              <h3 className="section-title">Entrées/ Soupes / Salades et Beignets</h3>
+              {renderMenuItems(entreesSimples)}
+            </div>
           </Col>
         </Row>
 
         {/* Entrées Spéciales */}
         <Row className="mb-5">
           <Col>
-            <h3 className="section-title fw-bold
-             mb-4">Entrées Spécialités Tandoor</h3>
-            {renderMenuItems(entreesSpeciales)}
+            <div className="menu-section">
+              <h3 className="section-title">Entrées Spécialités Tandoor</h3>
+              {renderMenuItems(entreesSpeciales)}
+            </div>
           </Col>
         </Row>
 
-          {/* Pains Maison */}
-          <Row className="mb-5">
+        {/* Pains Maison */}
+        <Row className="mb-5">
           <Col>
-            <h3 className="section-title fw-bold
-             mb-4">Pains Maison</h3>
-            {renderMenuItems(painsMaison)}
+            <div className="menu-section">
+              <h3 className="section-title">Pains Maison</h3>
+              {renderMenuItems(painsMaison)}
+            </div>
           </Col>
         </Row>
 
         {/* Spécialités Tibétaines Entrée et Plats */}
         <Row className="mb-5">
           <Col>
-            <h3 className="section-title fw-bold
-             mb-4">Spécialités Tibétaines Entrée et Plats</h3>
-            {renderMenuItems(entreeTibetian)}
+            <div className="menu-section">
+              <h3 className="section-title">Spécialités Tibétaines Entrée et Plats</h3>
+              {renderMenuItems(entreeTibetian)}
+            </div>
           </Col>
         </Row>
-
-        
       </Container>
     </div>
   );
