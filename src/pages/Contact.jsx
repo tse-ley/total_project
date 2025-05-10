@@ -78,10 +78,10 @@ const Contact = () => {
                     </Form.Group>
                     
                     <div className="d-flex justify-content-center">
-                      <Button 
-                        variant="dark" 
+                      <Button  
                         type="submit" 
                         className="px-4"
+                        style={{ backgroundColor: '#8b4513', border: 'none' }}
                       >
                         Submit
                       </Button>

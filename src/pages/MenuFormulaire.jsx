@@ -18,7 +18,7 @@ const MenuFormulaires = () => {
       ],
       plats: [
         'Poulet Tikka ou Poulet Tandoori au choix',
-        'Beignets Menu Express 14,90€Mixtes ',
+        'Beignets ',
         'Samosa Légumes'
       ],
       desserts: [
@@ -91,6 +91,19 @@ const MenuFormulaires = () => {
   ];
   
   // Render a single formulaire card
+  // Helper function to format menu items with descriptions
+  const formatMenuItem = (item) => {
+    const parts = item.split(/\(([^)]+)\)/);
+    if (parts.length === 1) return item;
+    
+    return (
+      <>
+        {parts[0]}
+        {parts[1] && <span className="menu-description">({parts[1]})</span>}
+      </>
+    );
+  };
+
   const renderFormulaireCard = (formulaire) => {
     return (
       <Card className="formulaire-card mb-4" key={formulaire.id}>
@@ -103,7 +116,7 @@ const MenuFormulaires = () => {
               <h5 className="mb-3">ENTRÉES AU CHOIX</h5>
               <ul className="list-unstyled">
                 {formulaire.entrees.map((entree, index) => (
-                  <li key={`entree-${index}`} className="mb-2">• {entree}</li>
+                  <li key={`entree-${index}`} className="mb-2">• {formatMenuItem(entree)}</li>
                 ))}
               </ul>
             </Col>
@@ -111,7 +124,7 @@ const MenuFormulaires = () => {
               <h5 className="mb-3">PLATS AU CHOIX</h5>
               <ul className="list-unstyled">
                 {formulaire.plats.map((plat, index) => (
-                  <li key={`plat-${index}`} className="mb-2">• {plat}</li>
+                  <li key={`plat-${index}`} className="mb-2">• {formatMenuItem(plat)}</li>
                 ))}
               </ul>
             </Col>
@@ -119,7 +132,7 @@ const MenuFormulaires = () => {
               <h5 className="mb-3">DESSERT AU CHOIX</h5>
               <ul className="list-unstyled">
                 {formulaire.desserts.map((dessert, index) => (
-                  <li key={`dessert-${index}`} className="mb-2">• {dessert}</li>
+                  <li key={`dessert-${index}`} className="mb-2">• {formatMenuItem(dessert)}</li>
                 ))}
               </ul>
             </Col>

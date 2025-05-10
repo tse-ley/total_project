@@ -75,7 +75,7 @@ const MenuDessert = () => {
     {
       id: 'd10',
       name: 'Dame Blanche',
-      description: 'R2 boules de vanille, 1 boule chocolat, caramel et chantilly',
+      description: '2 boules de vanille, 1 boule chocolat, caramel et chantilly',
       price: 8.90,
       image: '/images/kheer.jpg',
     },

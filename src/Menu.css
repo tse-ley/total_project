@@ -115,26 +115,66 @@ body {
 }
 
 /* Custom carousel styling */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-}
-
-.carousel-indicators button {
-  background-color: var(--accent-color) !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .menu-tabs .nav-link {
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
+ /* Position carousel indicators below items */
+  .food-carousel .carousel-indicators {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
   
-  .menu-item-image {
-    height: 150px;
+  /* Apply consistent styling for carousel controls */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
   }
-}
+  
+  /* Make carousel indicators match your color scheme */
+  .food-carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color) !important;
+    margin: 0 5px;
+  }
+  
+  /* Make sure menu items don't trigger carousel navigation */
+  .menu-item {
+    cursor: default;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .add-to-cart {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .add-to-cart:hover {
+    background-color: var(--accent-color);
+    opacity: 0.9;
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .menu-tabs .nav-link {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+    .menu-item-image {
+      height: 150px;
+    }
+  }
