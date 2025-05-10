@@ -88,7 +88,7 @@ const About = () => {
           <h2 className="fs-2 fw-bold mb-4 text-center">PROFITEZ DE L'AMBIANCE</h2>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-3 rounded shadow h-100 floating card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
                   src={restroImage} 
                   alt="Cuisine népalaise" 
@@ -106,7 +106,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-3 rounded shadow h-100 floating card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
                   src={viewImage} 
                   alt="Ambiance du restaurant" 
@@ -124,7 +124,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-3 rounded shadow h-100"  style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-3 rounded shadow h-100 floating card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
                   src={ambianceImage} 
                   alt="Décorations traditionnelles" 

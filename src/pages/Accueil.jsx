@@ -91,10 +91,10 @@ const Home = () => {
 
         {/* Menu Preview */}
         <section className="mb-5 py-4">
-          <h2 className="h3 fw-bold mb-4 text-center" style={{ color: 'var(--accent-color)' }} >Nos Spécialités</h2>
+          <h2 className="h3 fw-bold mb-4 text-center" style={{ color: 'var(--accent-color)' }}>Nos Spécialités</h2>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-4 rounded shadow h-100" style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-4 rounded shadow h-100 card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
                   src={momoImage} 
                   alt="Momos" 
@@ -109,7 +109,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-4 rounded shadow h-100" style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-4 rounded shadow h-100 card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <img 
                   src={thaliImage} 
                   alt="Thali" 
@@ -124,7 +124,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="bg-opacity-25 p-4 rounded shadow h-100" style={{ backgroundColor: 'var(--border-color)' }}>
+              <div className="bg-opacity-25 p-4 rounded shadow h-100 card-hover" style={{ backgroundColor: 'var(--border-color)' }}>
                 <div className="row g-2 mb-3">
                   {[spiceImage, foodImage, dishImage, dessertImage].map((img, idx) => (
                     <div className="col-6" key={idx}>
@@ -140,7 +140,7 @@ const Home = () => {
                 <h3 className="fw-bold h5 mb-2">Le goût de l'authenticité</h3>
                 <p className="fw-bold mb-2">Des recettes transmises de génération en génération, préparées avec des produits frais pour vous offrir l'authenticité d'un repas himalayen.</p>
                 <p className="mb-0" style={{ fontSize: '0.9rem' }}>
-                  Découvrez notre menu complet, une invitation à voyager à travers les saveurs authentiques de l'Himalaya. De nos fameux Momos traditionnels aux réconfortants Thali Népalais, chaque plat raconte une histoire. Laissez-vous tenter par nos curries maison longuement mijotés, nos grillades Tandoori marinées 24h, ou notre incontournable Butter Chicken onctueux.
+                  Découvrez notre menu complet, une invitation à voyager à travers les saveurs authentiques de l'Himalaya. De nos fameux Momos traditionnels aux réconfortants Thali Népalais, chaque plat raconte une histoire. Laissez-vous tenter par nos curries maison longuement mijotés, nos grillades Tandoori marinées 24h, ou notre incontournable Butter Chicken.
                 </p>
               </div>
             </div>

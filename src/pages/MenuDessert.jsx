@@ -67,8 +67,8 @@ const MenuDessert = () => {
     },
     {
       id: 'd9',
-      name: 'Dessert de chef Yaourt ',
-      description: 'maison avec une boule de Pâtisserie',
+      name: 'Dessert de chef',
+      description: 'Yaourt maison avec une boule de Pâtisserie',
       price: 7.90,
       image: '/images/gulab-jamun.jpg',
     },

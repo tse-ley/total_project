@@ -72,49 +72,49 @@ const MenuPlats = () => {
       id: 'a1',
       name: 'Agneau Curry',
       description: "Des cubes de Gigot d'agneau avec une sauce traditionnelle Indienne",
-      price: 13.50,
+      price: 14.90,
       image: '/images/dal-bhat.jpg',
     },
     {
       id: 'a2',
       name: 'Agneau Vindaloo',
       description: "Des cubes de gigot d'agneau avec pommes de terre et épices (moyennement relevé)",
-      price: 13.90,
+      price: 14.90,
       image: '/images/momo.jpg',
     },
     {
       id: 'a3',
       name: 'Agneau Saag',
       description: "Des cubes de gigot d'agneau mélange avec des épinards, des épices et coriandre fraîche",
-      price: 13.90,
+      price: 15.90,
       image: '/images/dal-bhat.jpg',
     },
     {
       id: 'a4',
       name: 'Agneau Korma',
       description: "Gigot d'agneau en sauce, noix de cajou, raisin et crème fraîche",
-      price: 13.90,
+      price: 15.90,
       image: '/images/momo.jpg',
     },
     {
       id: 'a5',
       name: 'Agneau Bharta',
       description: "Des cubes de gigot d'agneau mijoté dans une sauce spéciale au caviar d'aubergines",
-      price: 15.50,
+      price: 16.90,
       image: '/images/dal-bhat.jpg',
     },
     {
       id: 'a6',
       name: 'Agneau Madras',
       description: "Curry de gigot d'agneau avec des graines de moutarde ( plat relevé )",
-      price: 15.50,
+      price: 15.90,
       image: '/images/momo.jpg',
     },
     {
       id: 'a7',
       name: 'Royal Agneau Jalfrézi (Spécialité du Chef)',
       description: "Gigot d'agneau marinées et Grillés, sauté dans une sauce poivrons, oignons, tomates, gingembre et épices de l'Himalaya",
-      price: 15.50,
+      price: 16.90,
       image: '/images/dal-bhat.jpg',
     }
   ];
@@ -417,13 +417,7 @@ const MenuPlats = () => {
                             ...item,
                             onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
                           }))}
-                        /><MenuSection
-                        title="Plats Biryani"
-                        items={platsBiryani.map((item) => ({
-                          ...item,
-                          onAddToCart: () => addToCart(item), // Pass addToCart to MenuSection
-                        }))}
-                      />
+                        />
         <MenuSection
                           title="Legumes Accompagnements"
                           items={legumesAccompagnements.map((item) => ({

@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="col-md-3 mb-3 mb-md-0 text-center text-md-start">
             <h5 className="fs-6 mb-2 text-white fw-bold">Heures d'ouverture</h5>
             <div className="d-flex flex-column gap-1">
-              <p className="mb-0 small text-white">Mardi - Samedi :<br />12H - 14H30 / 18H30 - 23H</p>
+              <p className="mb-0 small text-white">Mardi - Jeudi :<br />12H - 14H30 / 18H30 - 23H</p>
               <p className="mb-0 small text-white">Vendredi - Dimanche :<br />12H - 14H30 / 18H30 - 23H15</p>
               <p className="mb-0 small text-white">Lundi : Fermé</p>
             </div>

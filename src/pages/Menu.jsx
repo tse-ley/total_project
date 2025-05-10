@@ -204,7 +204,7 @@ const Menu = () => {
       id: 'es8',
       name: 'Agneau Tikka',
       description: "Morceaux d'agneau marinés et grillés au four Tandoor",
-      price: 11.90,
+      price: 11.00,
       image: '/src/assets/entree_special3.jpg'
     },
     {

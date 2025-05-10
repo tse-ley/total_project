@@ -88,3 +88,27 @@ footer .small {
   font-size: 0.85rem;
   line-height: 1.4;
 }
+
+/* Subtle floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Reduced vertical movement */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply floating animation */
+.floating {
+  animation: float 5s ease-in-out infinite; /* Slower animation */
+}
+
+/* Hover animation for cards */
+.card-hover:hover {
+  transform: translateY(-5px); /* Moves the card slightly upward */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}

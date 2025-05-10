@@ -10,15 +10,15 @@ const MenuFormulaires = () => {
     {
       id: 'f1',
       name: 'Assiette Midi 13,90€',
-      description: 'Uniquement le midi, sauf week-end et jours fériés',
+      description: 'Avec Riz Basmati (Uniquement le midi, sauf week-end et jours fériés)',
       price: 13.90,
       entrees: [
-        'Daal ou Légumes Mixtes',
-        'Avec du Riz basmati'
+        'Légumes Mixtes',
+        'Daal'
       ],
       plats: [
         'Poulet Tikka ou Poulet Tandoori au choix',
-        'Beignets ',
+        'Beignets Mix ',
         'Samosa Légumes'
       ],
       desserts: [
@@ -37,8 +37,10 @@ const MenuFormulaires = () => {
         'Salade Népalaise (Concombres, Tomates, Carottes, Champignons noir et sauce sésame)'
       ],
       plats: [
-        "Poulet au Curry (Filet de poulet avec une sauce traditionnelle indienne ou Agneau Curry Des cubes de Gigo d'agneau avec une sauce traditionnelle Indienne)",
-        "Fish Masala (Poisson, tomates, poivrons aux épices de l'Himalaya ou Daal PalakLentilles mijotées et épinards)"
+        "Poulet au Curry (Filet de poulet avec une sauce traditionnelle indienne)",
+        "Agneau Curry( Des cubes de Gigo d'agneau avec une sauce traditionnelle Indienne)",
+        "Fish Masala (Poisson, tomates, poivrons aux épices de l'Himalaya)",
+        "Daal Palak (Lentilles mijotées et épinards)"
       ],
       desserts: [
         'Dessert de chef (Yaourt maison avec une boule de Pâtisserie)',
@@ -76,16 +78,18 @@ const MenuFormulaires = () => {
       price: 28.90,
       entrees: [
         'Poulet Tikka (Morceaux de poulet marinée et grillées au four Tandoor)',
-        "Khasi ko Chhoila (Gigot d'agneau désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé a four Tandoor ou Shabaleb Chaussons fourrés à la viande)",
+        "Khasi ko Chhoila (Gigot d'agneau désossé marinée aux poivrons, ail, gingembre, oignons et épices et grillé a four Tandoor)",
+        "Shabaleb (Chaussons fourrés à la viande)",
         "Baigan Bharta (Fondue de caviar d'aubergines crème fraîche)"
       ],
       plats: [
-        "Crevettes au Curry (Crevettes décortiquées avec une sauce traditionnelle indienne ou Agneau Saag Des cubes de gigot d'agneau mélange avec des épinards, des épices et coriandre fraîche)",
+        "Crevettes au Curry (Crevettes décortiquées avec une sauce traditionnelle indienne ) ",
+        "Agneau Saag (Des cubes de gigot d'agneau mélange avec des épinards, des épices et coriandre fraîche)",
         "Butter Chicken (Poulet mariné et grillé puis cuit dans la sauce au beurre, crème fraîche, et noix de cajou)",
         "Shamdre (Filet de poulet ou boeuf et légumes sautes avec riz au sauce soja et oeufs comme omelette)"
       ],
       desserts: [
-        'DESSERTS AU CHOIX à la carte'
+        'à la carte'
       ]
     }
   ];
