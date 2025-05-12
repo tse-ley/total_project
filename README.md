@@ -1,12 +1,60 @@
-# React + Vite
+Restaurant Website - React + Vite Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a modern restaurant website built with React + Vite for fast performance and smooth development. The UI is styled using Bootstrap for a responsive and clean layout, ensuring a great experience across all devices.
+Features
 
-## Expanding the ESLint configuration
+✔ Responsive Design – Works on mobile, tablet, and desktop.
+✔ Organized Assets – All images are stored in the assets folder, categorized by their respective sections (e.g., menu, gallery, hero).
+✔ Fast Development – Powered by Vite for quick HMR (Hot Module Replacement) and optimized builds.
+✔ Bootstrap Styling – Pre-built components and utilities for consistent styling.
+Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    ⚛️ React – Frontend library for building interactive UIs.
+
+    ⚡ Vite – Blazing-fast build tool and development server.
+
+    🎨 Bootstrap – CSS framework for responsive and modern design.
+
+Project Structure
+
+📁 src/  
+├── 📁 assets/  
+│   ├── 📁 menu/        # Images for menu items  
+│   ├── 📁 gallery/     # Restaurant gallery images  
+│   └── 📁 hero/        # Header/hero section images  
+├── 📁 components/      # Reusable React components  
+├── 📁 pages/           # Main page layouts  
+└── 📄 App.jsx          # Main application entry  
+
+Development Setup
+
+    sh
+    Clone the repository:
+
+https://github.com/tse-ley/sagarmatha.git
+
+Install dependencies:
+sh
+
+npm install
+
+Start the development server:
+sh
+
+    npm run dev
+    
+
+   
+ Open in your browser:
+    http://localhost:5173 (Vite default port)
+
+Build for Production
+
+sh
+
+npm run build
+
+Deploy the generated dist folder to your preferred hosting service (Netlify, Vercel, GitHub Pages, etc.).
