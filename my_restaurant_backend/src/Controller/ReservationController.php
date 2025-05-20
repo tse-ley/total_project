@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ReservationController extends AbstractController
 {
-    #[Route('/api/reservations', name: 'api_reservations', methods: ['GET'])]
+    #[Route('/api/reservation', name: 'api_reservation', methods: ['GET'])]
     public function index(): JsonResponse
     {
         return $this->json([
@@ -18,7 +18,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/api/reservations', name: 'api_reservations_create', methods: ['POST'])]
+    #[Route('/api/reservation', name: 'api_reservation_create', methods: ['POST'])]
     public function create(Request $request): JsonResponse
     {
         return $this->json([
@@ -27,7 +27,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/api/reservations/{id}', name: 'api_reservations_update', methods: ['PUT'])]
+    #[Route('/api/reservation/{id}', name: 'api_reservation_update', methods: ['PUT'])]
     public function update(Request $request, int $id): JsonResponse
     {
         return $this->json([
@@ -36,7 +36,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/api/reservations/{id}', name: 'api_reservations_delete', methods: ['DELETE'])]
+    #[Route('/api/reservation/{id}', name: 'api_reservation_delete', methods: ['DELETE'])]
     public function delete(int $id): JsonResponse
     {
         return $this->json([

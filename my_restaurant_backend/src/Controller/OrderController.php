@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class OrderController extends AbstractController
 {
-    #[Route('/api/orders', name: 'api_orders', methods: ['GET'])]
+    #[Route('/api/order', name: 'api_order', methods: ['GET'])]
     public function index(): JsonResponse
     {
         return $this->json([
@@ -16,7 +16,7 @@ class OrderController extends AbstractController
         ]);
     }
 
-    #[Route('/api/orders', name: 'api_orders_create', methods: ['POST'])]
+    #[Route('/api/order', name: 'api_orders_create', methods: ['POST'])]
     public function create(Request $request): JsonResponse
     {
         return $this->json([
@@ -25,7 +25,7 @@ class OrderController extends AbstractController
         ]);
     }
 
-    #[Route('/api/orders/{id}', name: 'api_orders_update', methods: ['PUT'])]
+    #[Route('/api/order/{id}', name: 'api_order_update', methods: ['PUT'])]
     public function update(Request $request, int $id): JsonResponse
     {
         return $this->json([
@@ -34,7 +34,7 @@ class OrderController extends AbstractController
         ]);
     }
 
-    #[Route('/api/orders/{id}', name: 'api_orders_delete', methods: ['DELETE'])]
+    #[Route('/api/order/{id}', name: 'api_order_delete', methods: ['DELETE'])]
     public function delete(int $id): JsonResponse
     {
         return $this->json([

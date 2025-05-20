@@ -8,16 +8,87 @@ import spiceImage from '../assets/cuisine/momo2.jpeg';
 import foodImage from '../assets/cuisine/dish2.jpeg';
 import dishImage from '../assets/cuisine/dish1.jpeg';
 import dessertImage from '../assets/cuisine/dessert.jpeg';
-import '../index.css'; // Import your CSS file
+import '../index.css';
+
+import { Modal, Button, Form } from 'react-bootstrap';
+import axios from 'axios';
 
 const Home = () => {
-  const [guestCount, setGuestCount] = useState(2);
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [showReservationModal, setShowReservationModal] = useState(false);
+  const [reservationSubmitting, setReservationSubmitting] = useState(false);
+  const [reservationSuccess, setReservationSuccess] = useState(false);
 
-  const handleReservation = (e) => {
+  // Split form into two parts: mainFormData (inline), modalFormData (popup)
+  const [mainFormData, setMainFormData] = useState({
+    partySize: 2,
+    reservationTime: '',
+  });
+
+  const [modalFormData, setModalFormData] = useState({
+    customerName: '',
+    customerEmail: ''
+  });
+
+  const handleMainFormChange = (e) => {
+    const { name, value } = e.target;
+    setMainFormData({ ...mainFormData, [name]: value });
+  };
+
+  const handleModalInputChange = (e) => {
+    const { name, value } = e.target;
+    setModalFormData({ ...modalFormData, [name]: value });
+  };
+
+  const handleReservationClick = (e) => {
     e.preventDefault();
-    alert(`Réservation pour ${guestCount} personnes le ${date} à ${time}`);
+    // Validate the main form before opening modal
+    if (!mainFormData.partySize || !mainFormData.reservationTime) {
+      alert('Veuillez remplir le nombre de personnes et la date/heure.');
+      return;
+    }
+    setShowReservationModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowReservationModal(false);
+    if (reservationSuccess) {
+      setReservationSuccess(false);
+      setMainFormData({
+        partySize: 2,
+        reservationTime: ''
+      });
+      setModalFormData({
+        customerName: '',
+        customerEmail: ''
+      });
+    }
+  };
+
+  const handleSubmitReservation = async (e) => {
+    e.preventDefault();
+    setReservationSubmitting(true);
+
+    try {
+      const reservationData = {
+        ...mainFormData,
+        ...modalFormData,
+        partySize: parseInt(mainFormData.partySize),
+      };
+
+      await axios.post('/api/reservation', reservationData, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+
+      setReservationSubmitting(false);
+      setReservationSuccess(true);
+    } catch (error) {
+      console.error('Error submitting reservation:', error);
+      setReservationSubmitting(false);
+      alert("Une erreur s'est produite lors de la réservation. Veuillez réessayer.");
+    }
   };
 
   return (
@@ -156,52 +227,107 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Reservation */}
-        <section className="bg-opacity-25 p-5 rounded shadow mt-5" style={{ backgroundColor: 'var(--border-color)' }}>
-          <h2 className="h3 fw-bold text-center mb-4">Réservez une table</h2>
-          <form onSubmit={handleReservation} className="px-md-5">
-            <div className="row g-4">
-              <div className="col-md-4">
-                <label className="form-label fw-bold text-dark">Nombre de convives</label>
-                <select 
-                  value={guestCount}
-                  onChange={(e) => setGuestCount(e.target.value)}
-                  className="form-select"
-                >
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-                    <option key={num} value={num}>{num}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="col-md-4">
-                <label className="form-label fw-bold text-dark">Date</label>
-                <input 
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="form-control"
-                />
-              </div>
-              <div className="col-md-4">
-                <label className="form-label fw-bold text-dark">Heure</label>
-                <input 
-                  type="time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  className="form-control"
-                />
-              </div>
-              <div className="col-12 text-center mt-4">
-                <button type="submit" className="btn btn-dark text-white fw-bold px-5 py-2" style={{ backgroundColor: 'var(--accent-color)', borderColor: 'var(--accent-color)' }}>
-                  Réserver
-                </button>
-              </div>
+        {/* Reservation Section with inline inputs */}
+      <section className="bg-opacity-25 p-5 rounded shadow mt-5" style={{ backgroundColor: 'var(--border-color)' }}>
+        <h2 className="h3 fw-bold text-center mb-4">Réservez une table</h2>
+        <Form onSubmit={handleReservationClick} className="row g-3 justify-content-center">
+          <Form.Group className="col-md-4">
+            <Form.Label>Nombre de personnes</Form.Label>
+            <Form.Control
+              type="number"
+              name="partySize"
+              value={mainFormData.partySize}
+              onChange={handleMainFormChange}
+              min="1"
+              max="12"
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="col-md-4">
+            <Form.Label>Date et Heure</Form.Label>
+            <Form.Control
+              type="datetime-local"
+              name="reservationTime"
+              value={mainFormData.reservationTime}
+              onChange={handleMainFormChange}
+              required
+            />
+          </Form.Group>
+
+          <div className="col-12 text-center mt-4">
+            <button
+              type="submit"
+              className="btn btn-dark text-white fw-bold px-5 py-2"
+              style={{ backgroundColor: 'var(--accent-color)', borderColor: 'var(--accent-color)' }}
+            >
+              Réserver
+            </button>
+          </div>
+        </Form>
+      </section>
+
+      {/* Modal: Name + Email Confirmation */}
+      <Modal show={showReservationModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{reservationSuccess ? 'Réservation Confirmée' : 'Confirmez votre Réservation'}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {reservationSuccess ? (
+            <div className="text-center py-4">
+              <i className="bi bi-check-circle-fill text-success" style={{ fontSize: '3rem' }}></i>
+              <h4 className="mt-3">Merci pour votre réservation!</h4>
+              <p>Un email de confirmation a été envoyé à {modalFormData.customerEmail}</p>
+              <p>
+                Nous vous attendons le {new Date(mainFormData.reservationTime).toLocaleDateString()} à {new Date(mainFormData.reservationTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} pour {mainFormData.partySize} personnes.
+              </p>
             </div>
-          </form>
-        </section>
-      </div>
+          ) : (
+            <Form onSubmit={handleSubmitReservation}>
+              <Form.Group className="mb-3">
+                <Form.Label>Nom complet</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="customerName"
+                  value={modalFormData.customerName}
+                  onChange={handleModalInputChange}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="customerEmail"
+                  value={modalFormData.customerEmail}
+                  onChange={handleModalInputChange}
+                  required
+                />
+              </Form.Group>
+
+              <div className="d-grid mt-4">
+                <Button
+                  variant="dark"
+                  type="submit"
+                  disabled={reservationSubmitting}
+                  style={{ backgroundColor: 'var(--accent-color)', borderColor: 'var(--accent-color)' }}
+                >
+                  {reservationSubmitting ? 'Traitement en cours...' : 'Confirmer la réservation'}
+                </Button>
+              </div>
+            </Form>
+          )}
+        </Modal.Body>
+        {reservationSuccess && (
+          <Modal.Footer>
+            <Button variant="outline-dark" onClick={handleCloseModal}>Fermer</Button>
+          </Modal.Footer>
+        )}
+      </Modal>
     </div>
+    </div> 
   );
-};
+  }
 
 export default Home;
