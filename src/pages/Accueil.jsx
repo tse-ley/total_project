@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import heroImage from '../assets/cuisine/hero.JPG';
 import momoImage from '../assets/cuisine/momo.jpeg'; 
 import thaliImage from '../assets/cuisine/thali1.jpeg'; 
@@ -11,7 +12,7 @@ import dessertImage from '../assets/cuisine/dessert.jpeg';
 import '../index.css';
 
 import { Modal, Button, Form } from 'react-bootstrap';
-import axios from 'axios';
+
 
 const Home = () => {
   const [showReservationModal, setShowReservationModal] = useState(false);
@@ -69,27 +70,38 @@ const Home = () => {
     setReservationSubmitting(true);
 
     try {
+      // Format the date and time properly
+      const reservationDateTime = new Date(mainFormData.reservationTime);
+      
       const reservationData = {
-        ...mainFormData,
-        ...modalFormData,
-        partySize: parseInt(mainFormData.partySize),
+        name: modalFormData.customerName,
+        email: modalFormData.customerEmail,
+        guests: parseInt(mainFormData.partySize),
+        date: reservationDateTime.toISOString().split('T')[0],
+        time: reservationDateTime.toTimeString().split(' ')[0],
+        status: 'pending'
       };
 
-      await axios.post('/api/reservation', reservationData, {
+      const response = await axios.post('http://127.0.0.1:8000/api/reservation', reservationData, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${localStorage.getItem('token')}`
+          'Access-Control-Allow-Origin': '*'
         }
       });
 
-      setReservationSubmitting(false);
-      setReservationSuccess(true);
+      if (response.data.status === 'success') {
+        setReservationSubmitting(false);
+        setReservationSuccess(true);
+      } else {
+        throw new Error(response.data.message || 'Failed to create reservation');
+      }
     } catch (error) {
       console.error('Error submitting reservation:', error);
       setReservationSubmitting(false);
-      alert("Une erreur s'est produite lors de la réservation. Veuillez réessayer.");
+      alert(error.response?.data?.message || "Une erreur s'est produite lors de la réservation. Veuillez réessayer.");
     }
   };
+
 
   return (
     <div className=" bg-opacity-10 d-flex flex-column min-vh-100">
